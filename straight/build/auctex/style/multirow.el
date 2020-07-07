@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/auctex/style/multirow.el

@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/emacs-jupyter/jupyter-org-extensions.el

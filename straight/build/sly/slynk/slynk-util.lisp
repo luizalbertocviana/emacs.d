@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/sly/slynk/slynk-util.lisp

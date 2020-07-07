@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/smartparens/smartparens-scala.el

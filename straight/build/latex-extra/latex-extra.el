@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/latex-extra/latex-extra.el

@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/evil-escape/evil-escape.el

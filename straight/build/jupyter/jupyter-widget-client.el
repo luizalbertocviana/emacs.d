@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/emacs-jupyter/jupyter-widget-client.el

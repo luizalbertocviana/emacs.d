@@ -1,1 +1,0 @@
-/home/luiz/.emacs.d/straight/repos/emacs-doom-themes/themes/doom-tomorrow-night-theme.el
