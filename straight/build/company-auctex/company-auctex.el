@@ -1,0 +1,1 @@
+/home/luiz/.emacs.d/straight/repos/company-auctex/company-auctex.el

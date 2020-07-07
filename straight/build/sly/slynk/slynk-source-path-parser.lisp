@@ -1,0 +1,1 @@
+/home/luiz/.emacs.d/straight/repos/sly/slynk/slynk-source-path-parser.lisp

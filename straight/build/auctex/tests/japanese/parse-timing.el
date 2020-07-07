@@ -1,0 +1,1 @@
+/home/luiz/.emacs.d/straight/repos/auctex/tests/japanese/parse-timing.el

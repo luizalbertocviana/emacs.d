@@ -1,0 +1,1 @@
+/home/luiz/.emacs.d/straight/repos/general.el/.dirs-local.el

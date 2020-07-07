@@ -1,0 +1,1 @@
+/home/luiz/.emacs.d/straight/repos/emacs-jupyter/jupyter-mime.el
