@@ -298,7 +298,6 @@
         (counsel-mode 1)
     )
     (use-package ivy-posframe
-      :if window-system
       :custom
         (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
       :config
