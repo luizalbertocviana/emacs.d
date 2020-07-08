@@ -1,3 +1,3 @@
 #! /bin/bash
 
-emacsclient -a=emacs-server -c
+emacsclient -a=emacs-server -c $@
