@@ -584,7 +584,7 @@
         "c"   'calendar
         "g"   'gnus
         "i"   'imenu
-        "q"   'save-buffers-kill-emacs
+        "q"   'delete-frame
         "r"   'async-shell-command
         "t"   'eshell
     )
