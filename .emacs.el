@@ -265,13 +265,13 @@
 
 ;; start screen
 (use-package dashboard
-  :if window-system
   :custom
     (dashboard-startup-banner 'logo)
     (dashboard-center-content t)
     (dashboard-set-file-icons nil)
-    (dashboard-set-footer nil)
-    (dashboard-items '((recents . 15)))
+    (dashboard-set-footer     nil)
+    (dashboard-items          '((recents . 15)))
+    (initial-buffer-choice    (lambda () (get-buffer "*dashboard*")))
   :config
     (dashboard-setup-startup-hook)
 )
