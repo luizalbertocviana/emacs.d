@@ -952,6 +952,10 @@
         "s s"   'org-table-sort-lines
         "s u"   'org-table-iterate-buffer-tables
         "s v"   'org-table-toggle-coordinate-overlays
+        "s h"   'org-table-move-cell-left
+        "s j"   'org-table-move-cell-down
+        "s k"   'org-table-move-cell-up
+        "s l"   'org-table-move-cell-right
         "s c h" 'org-table-move-column-left
         "s c l" 'org-table-move-column-right
         "s c d" 'org-table-delete-column
