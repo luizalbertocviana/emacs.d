@@ -572,6 +572,7 @@
         "o"   '(:ignore t :which-key "org")
         "p"   '(:ignore t :which-key "program")
         "s"   '(:ignore t :which-key "search")
+        "t"   '(:ignore t :which-key "terminal")
         "w"   '(:ignore t :which-key "windows")
         "v"   '(:ignore t :which-key "version control")
     )
@@ -589,7 +590,14 @@
         "i"   'imenu
         "q"   'delete-frame
         "r"   'async-shell-command
-        "t"   'eshell
+    )
+    ;; terminal menu
+    (general-define-key
+      :states  '(normal)
+      :keymaps '(override)
+      :prefix  "SPC t"
+        "t" 'eshell
+        "T" 'vterm
     )
     ;; help menu
     (general-define-key
