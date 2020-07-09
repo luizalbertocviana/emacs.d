@@ -448,6 +448,9 @@
   :commands (magit-status magit-dispatch)
 )
 
+;; vterm
+(use-package vterm)
+
 ;; LaTeX
 (use-package tex-site
   :straight auctex
