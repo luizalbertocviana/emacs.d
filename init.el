@@ -851,7 +851,7 @@
     (general-define-key
       :states  '(normal)
       :keymaps 'dashboard-mode-map
-        "r" (general-simulate-key "r" :state 'emacs)
+        "p" (general-simulate-key "p" :state 'emacs)
         "l" 'dashboard-return
     )
     ;; ivy minibuffer
