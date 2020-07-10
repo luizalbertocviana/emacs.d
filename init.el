@@ -305,6 +305,14 @@
     )
 )
 
+;; projectile
+(use-package projectile
+  :custom
+    (projectile-completion-system 'ivy)
+  :config
+    (projectile-mode +1)
+)
+
 ;; dired file manager
 (use-package dired-x :straight nil
   :hook
