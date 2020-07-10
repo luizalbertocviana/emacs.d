@@ -270,7 +270,7 @@
     (dashboard-center-content t)
     (dashboard-set-file-icons nil)
     (dashboard-set-footer     nil)
-    (dashboard-items          '((recents . 15)))
+    (dashboard-items          '((projects . 10)))
     (initial-buffer-choice    (lambda () (get-buffer "*dashboard*")))
   :config
     (dashboard-setup-startup-hook)
