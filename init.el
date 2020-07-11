@@ -92,6 +92,17 @@
 (setq user-full-name "Luiz Alberto do Carmo Viana")
 (setq user-mail-address "luizalbertocviana@gmail.com")
 
+;; the functions below are intended to be used in i3wm keybindings
+;; with emacs --eval
+
+;; creates a new eshell buffer
+(defun new-eshell ()
+  (eshell t))
+
+;; creates dired buffer in current dir
+(defun dired-current-dir ()
+  (dired "./"))
+
 ;; straight package manager initialization
 (setq straight-use-package-by-default t)
 (setq straight-check-for-modifications nil)
