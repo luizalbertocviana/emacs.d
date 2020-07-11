@@ -196,6 +196,11 @@
     (global-undo-tree-mode)
     ;; ex commands, which a vim user is likely to be familiar with
     (use-package evil-expat :defer t)
+    ;; visual editing hints
+    (use-package evil-goggles
+      :config
+        (evil-goggles-mode)
+    )
     ;; like vim-surround
     (use-package evil-surround
       :config
