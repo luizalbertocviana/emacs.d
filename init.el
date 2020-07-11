@@ -648,15 +648,21 @@
       :states  '(normal)
       :keymaps '(override)
       :prefix  "SPC f"
-        "D" 'diff-buffer-with-file
-        "U" 'revert-buffer
-        "S" 'write-file
-        "m" 'counsel-bookmark
-        "o" '(:ignore t :which-key "dired")
-        "o" (lambda () (interactive) (dired "./"))
-        "r" 'counsel-recentf
-        "R" 'recover-this-file
-        "s" 'save-buffer
+        "D"   'diff-buffer-with-file
+        "R"   'recover-this-file
+        "S"   'write-file
+        "U"   'revert-buffer
+        "m"   'counsel-bookmark
+        "o"   '(:ignore t :which-key "dired")
+        "o"   (lambda () (interactive) (dired "./"))
+        "p c" 'projectile-commander
+        "p g" 'projectile-grep
+        "p o" 'projectile-find-file-dwim
+        "p p" 'projectile-switch-project
+        "p r" 'projectile-replace-regexp
+        "p"   '(:ignore t :which-key "project")
+        "r"   'counsel-recentf
+        "s"   'save-buffer
     )
     ;; spell checking
     (general-define-key
