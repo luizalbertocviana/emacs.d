@@ -887,6 +887,7 @@
         "k" 'dired-previous-line
         "l" 'dired-find-alternate-file
         "m" 'dired-mark
+        "o" 'dired-open-file
         "s" 'evil-ex-search-forward
         "u" 'dired-undo
         "y" 'dired-copy-filename-as-kill
