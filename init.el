@@ -20,8 +20,14 @@
 ;; inhibit useless and old-school startup screen
 (setq inhibit-startup-screen t )
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
 (tool-bar-mode -1)
+
+;; disable scroll bars in every frame
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (modify-frame-parameters frame
+                                     '((vertical-scroll-bars   . nil)
+                                       (horizontal-scroll-bars . nil)))))
 
 ;; substitute "yes or no" prompts for "y or n"
 (defalias 'yes-or-no-p 'y-or-n-p)
