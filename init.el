@@ -8,7 +8,7 @@
 
 ;; we do not use package.el
 (setq package-enable-at-startup nil)
-;; this keeps emacs from appending variables to the end this file
+;; this keeps emacs from appending variables to the end of this file
 (setq package--init-file-ensured t)
 
 ;; resizing makes no sense if frame is always used maximized
