@@ -6,6 +6,13 @@
       ;; avoid regex search for el and elc files loaded during startup
       file-name-handler-alist nil)
 
+;; substitute "yes or no" prompts for "y or n"
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; auto-answer yes during startup (needed to build some packages)
+(fset 'old-prompt (symbol-function 'y-or-n-p))
+(fset 'y-or-n-p (lambda (&rest args) t))
+
 ;; we do not use package.el
 (setq package-enable-at-startup nil)
 ;; this keeps emacs from appending variables to the end of this file
@@ -28,9 +35,6 @@
             (modify-frame-parameters frame
                                      '((vertical-scroll-bars   . nil)
                                        (horizontal-scroll-bars . nil)))))
-
-;; substitute "yes or no" prompts for "y or n"
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; dont use dialog boxes, use minibuffer instead
 (setq use-dialog-box nil)
@@ -1378,3 +1382,6 @@
 (setq gc-cons-threshold 16777216
       gc-cons-percentage 0.1
       file-name-handler-alist last-file-name-handler-alist)
+
+;; restore manual answer prompt
+(fset 'y-or-n-p 'old-prompt)
