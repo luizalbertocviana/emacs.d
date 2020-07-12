@@ -905,6 +905,7 @@
         "J" 'dired-next-marked-file
         "K" 'dired-prev-marked-file
         "M" 'dired-unmark
+        "N" 'evil-ex-search-previous
         "U" 'dired-unmark-all-marks
         "h" (lambda () (interactive) (find-alternate-file ".."))
         "j" 'dired-next-line
@@ -913,7 +914,6 @@
         "m" 'dired-mark
         "n" 'evil-ex-search-next
         "o" 'dired-open-file
-        "p" 'evil-ex-search-previous
         "s" 'evil-ex-search-forward
         "u" 'dired-undo
         "y" 'dired-copy-filename-as-kill
