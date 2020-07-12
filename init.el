@@ -256,6 +256,8 @@
       "Y" "y$"
       ;; macro execution
       "Q" "@q"
+      ;; search
+      "s" 'evil-ex-search-forward
     )
     (evil-define-key 'visual 'global
       ;; movements
