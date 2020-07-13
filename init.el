@@ -115,7 +115,6 @@
 
 ;; straight package manager initialization
 (setq straight-use-package-by-default t)
-(setq straight-check-for-modifications nil)
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
