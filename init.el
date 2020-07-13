@@ -592,6 +592,10 @@
 
 ;; deals with language server protocol
 (use-package eglot
+  :straight (eglot :type   git
+                   :flavor melpa
+                   :host   github
+                   :repo   "luizalbertocviana/eglot")
   :hook
     (c++-mode    . eglot-ensure)
     (python-mode . eglot-ensure)
