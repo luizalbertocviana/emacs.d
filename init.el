@@ -341,6 +341,24 @@
     (projectile-mode +1)
 )
 
+(use-package dired-aux :straight nil
+  :config
+  (defun dired-dwim-target-directory ()
+    (let* ((get-buffer-dir (lambda (buffer)
+                             (with-current-buffer buffer
+                               (and (eq major-mode 'dired-mode)
+                                    (dired-current-directory)))))
+           (this-dir (funcall get-buffer-dir (current-buffer)))
+           (other-dir (some (lambda (buffer)
+                              (let ((buffer-dir (funcall get-buffer-dir buffer)))
+                                (and (not (equal buffer-dir this-dir))
+                                     buffer-dir)))
+                            (buffer-list))))
+      (if dired-dwim-target
+          (or other-dir this-dir)
+        this-dir)))
+)
+
 ;; dired file manager
 (use-package dired-x :straight nil
   :preface
@@ -349,20 +367,6 @@
       (interactive)
       (let* ((file (dired-get-filename nil t)))
         (call-process "xdg-open" nil 0 nil file)))
-    (defun dired-dwim-target-directory ()
-      (let* ((get-buffer-dir (lambda (buffer)
-                               (with-current-buffer buffer
-                                 (and (eq major-mode 'dired-mode)
-                                      (dired-current-directory)))))
-             (this-dir (funcall get-buffer-dir (current-buffer)))
-             (other-dir (some (lambda (buffer)
-                                (let ((buffer-dir (funcall get-buffer-dir buffer)))
-                                  (and (not (equal buffer-dir this-dir))
-                                       buffer-dir)))
-                              (buffer-list))))
-        (if dired-dwim-target
-            (or other-dir this-dir)
-          this-dir)))
   :hook
     (dired-mode . dired-omit-mode)
   :custom
