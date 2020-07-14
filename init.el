@@ -1282,6 +1282,17 @@
         "l" 'cider-load-file
         "r" 'cider-jack-in
     )
+    ;; hy mode
+    (general-define-key
+      :states  '(normal)
+      :keymaps '(hy-mode-map)
+      :prefix  "SPC m"
+        "b" 'hy-shell-eval-buffer
+        "d" 'hy-describe-thing-at-point
+        "e" 'hy-shell-eval-current-form
+        "i" 'hy-jedhy-update-imports
+        "r" 'run-hy
+    )
     ;; gnus
     (general-define-key
       :states  '(normal)
