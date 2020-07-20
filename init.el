@@ -360,12 +360,6 @@
 
 ;; dired file manager
 (use-package dired-x :straight nil
-  :preface
-    (defun dired-open-file ()
-      "In dired, open the file named on this line."
-      (interactive)
-      (let* ((file (dired-get-filename nil t)))
-        (call-process "xdg-open" nil 0 nil file)))
   :hook
     (dired-mode . dired-omit-mode)
   :custom
