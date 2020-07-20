@@ -932,7 +932,7 @@
         "l" 'dired-find-alternate-file
         "m" 'dired-mark
         "n" 'evil-ex-search-next
-        "o" 'dired-open-file
+        "o" 'browse-url-of-dired-file
         "s" 'evil-ex-search-forward
         "u" 'dired-undo
         "y" 'dired-copy-filename-as-kill
