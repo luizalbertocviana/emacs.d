@@ -702,7 +702,7 @@ only one in the current frame, kill the frame instead"
        "b" 'ivy-switch-buffer
        "d" 'kill-this-buffer
        "e" 'eval-buffer
-       "q" 'kill-buffer-and-window
+       "q" 'kill-buffer-and-frame-or-window
        "y" 'clone-indirect-buffer-other-window
     )
     (general-define-key
