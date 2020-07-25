@@ -593,7 +593,7 @@
   :hook
     (lisp-mode . sly-mode)
   :custom
-    (inferior-lisp-program "sbcl")
+    (inferior-lisp-program "ros run")
 )
 
 ;; deals with language server protocol
