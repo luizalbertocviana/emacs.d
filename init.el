@@ -627,14 +627,14 @@
 ;; keybindings
 (use-package general
   :preface
-    (defun kill-buffer-and-frame-or-window ()
-      "kills current buffer and its window. When its window is the
+  (defun kill-buffer-and-frame-or-window ()
+    "kills current buffer and its window. When its window is the
 only one in the current frame, kill the frame instead"
-      (interactive)
-      (kill-buffer)
+    (interactive)
+    (when (kill-buffer)
       (if (one-window-p)
           (delete-frame)
-        (delete-window)))
+        (delete-window))))
   :config
     ;; naming some prefixes
     (general-define-key
