@@ -457,8 +457,6 @@
     ;; accepts letters as bullet points for lists
     (org-list-allow-alphabetical t)
   :config
-    ;; add package minted (with options) to auto generated tex files
-    (push '("newfloat, cache = false" "minted") org-latex-packages-alist)
     ;; allowed languages
     (org-babel-do-load-languages
       'org-babel-load-languages
