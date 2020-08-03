@@ -624,6 +624,9 @@
                      :host   github
                      :repo   "luizalbertocviana/hy-mode"))
 
+;; simple and effective interface to google translation service
+(use-package google-translate)
+
 ;; keybindings
 (use-package general
   :preface
