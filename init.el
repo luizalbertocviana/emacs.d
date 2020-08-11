@@ -226,16 +226,6 @@
       :config
         (global-evil-surround-mode 1)
     )
-    ;; turns jk into ESC
-    (use-package evil-escape
-      :custom
-        (evil-escape-key-sequence "jk")
-        (evil-escape-delay 0.3)
-      :config
-        (evil-escape-mode)
-    )
-    ;; assigns to a two text objects concerning comma separated
-    ;; arguments
     (use-package evil-args
       :config
         (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
