@@ -599,6 +599,9 @@
                  `(python-mode . ("python" "-m" "pyls")))
 )
 
+;; cmake mode
+(use-package cmake-mode)
+
 ;; gdb setup
 (setq gdb-display-io-nopopup t)
 
