@@ -635,6 +635,7 @@
     ;; chords to avoid reaching to shift key
     (key-chord-define evil-insert-state-map "''" "\"")
     (key-chord-define evil-insert-state-map "44" "$")
+    (key-chord-define evil-insert-state-map "77" "&")
     (key-chord-define evil-insert-state-map "88" "*")
     (key-chord-define evil-insert-state-map "99" "(")
     (key-chord-define evil-insert-state-map "--" "_")
