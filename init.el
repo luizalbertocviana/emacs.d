@@ -617,6 +617,17 @@
                      :host   github
                      :repo   "luizalbertocviana/hy-mode"))
 
+;; haskell setup
+(use-package haskell-mode)
+
+;; interactive haskell
+(use-package dante
+  :after    haskell-mode
+  :commands 'dante-mode
+  :init
+    (add-hook 'haskell-mode-hook 'flycheck-mode)
+    (add-hook 'haskell-mode-hook 'dante-mode))
+
 ;; simple and effective interface to google translation service
 (use-package google-translate)
 
