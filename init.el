@@ -591,12 +591,16 @@
                    :host   github
                    :repo   "luizalbertocviana/eglot")
   :hook
-    (c++-mode    . eglot-ensure)
-    (python-mode . eglot-ensure)
+    (c++-mode     . eglot-ensure)
+    (python-mode  . eglot-ensure)
+    (haskell-mode . eglot-ensure)
   :config
     ;; python
     (add-to-list 'eglot-server-programs
                  `(python-mode . ("python" "-m" "pyls")))
+    ;; haskell
+    (add-to-list 'eglot-server-programs
+                 `(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
 )
 
 ;; cmake mode
