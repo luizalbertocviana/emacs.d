@@ -626,6 +626,13 @@
   :hook
     (haskell-mode . interactive-haskell-mode))
 
+;; rust setup
+(use-package rust-mode
+  :hook
+    (rust-mode . racer-mode)
+  :config
+    (use-package racer))
+
 ;; simple and effective interface to google translation service
 (use-package google-translate)
 
