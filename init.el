@@ -1199,10 +1199,13 @@ only one in the current frame, kill the frame instead"
         "TAB" 'magit-section-toggle
         "P"   'magit-push
         "a"   'magit-commit-amend
+        "b"   'magit-branch
         "c"   'magit-commit
+        "f"   'magit-fetch
         "i"   'magit-gitignore
         "j"   'magit-next-line
         "k"   'magit-previous-line
+        "p"   'magit-pull
         "q"   'magit-mode-bury-buffer
         "r"   'magit-refresh
         "s"   'magit-stage
