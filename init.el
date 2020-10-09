@@ -817,22 +817,9 @@ only one in the current frame, kill the frame instead"
       :states  '(normal)
       :keymaps '(override)
       :prefix  "SPC v"
-        "G"   'magit-dispatch
-        "P"   'vc-push
-        "V"   'vc-annotate
-        "c"   'vc-resolve-conflicts
-        "d"   'vc-diff
+        "V"   'magit-dispatch
         "g"   'magit-status
-        "p"   'vc-pull
-        "r"   'vc-revision-other-window
-        "u"   'vc-revert
-        "v"   'vc-next-action
-        "o"   '(:ignore t :which-key "vc-dir")
-        "o"   (lambda () (interactive) (vc-dir "./"))
-        "l"   '(:ignore t :which-key "log")
-        "l i" 'vc-log-incoming
-        "l l" 'vc-print-log
-        "l o" 'vc-log-outgoing
+        "v"   'magit-file-dispatch
     )
     (general-define-key
       :states  '(normal)
