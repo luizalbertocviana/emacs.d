@@ -1341,6 +1341,17 @@ only one in the current frame, kill the frame instead"
         "i" 'hy-jedhy-update-imports
         "r" 'run-hy
     )
+    ;; rust mode
+    (general-define-key
+      :states  '(normal)
+      :keymaps '(rust-mode-map)
+      :prefix  "SPC m"
+        "b" 'compile
+        "d" 'rust-dbg-wrap-or-unwrap
+        "e" 'next-error
+        "f" 'rust-format-buffer
+        "r" 'recompile
+    )
     ;; gnus
     (general-define-key
       :states  '(normal)
