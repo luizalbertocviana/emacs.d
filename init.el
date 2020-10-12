@@ -586,24 +586,26 @@
     (inferior-lisp-program "ros run")
 )
 
-;; deals with language server protocol
-(use-package eglot
-  :straight (eglot :type   git
-                   :flavor melpa
-                   :host   github
-                   :repo   "luizalbertocviana/eglot")
-  :hook
-    (c++-mode     . eglot-ensure)
-    (python-mode  . eglot-ensure)
-    (haskell-mode . eglot-ensure)
+;; lsp mode
+(use-package lsp-mode
+    :hook
+      (lsp-mode . lsp-enable-which-key-integration)
+    :config
+      (use-package lsp-ui)
+    :init
+      ;; c++
+      (use-package ccls
+        :hook
+          (c++-mode . lsp))
+      ;; haskell
+      (use-package lsp-haskell
+        :hook
+          (haskell-mode . lsp)))
+
+;; yasnippet
+(use-package yasnippet
   :config
-    ;; python
-    (add-to-list 'eglot-server-programs
-                 `(python-mode . ("python" "-m" "pyls")))
-    ;; haskell
-    (add-to-list 'eglot-server-programs
-                 `(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
-)
+    (yas-global-mode 1))
 
 ;; cmake mode
 (use-package cmake-mode)
@@ -628,9 +630,8 @@
   :hook
     (haskell-mode . interactive-haskell-mode))
 
-(use-package rustic
-      :custom
-        (rustic-lsp-client 'eglot))
+; rust setup
+(use-package rustic)
 
 ;; simple and effective interface to google translation service
 (use-package google-translate)
