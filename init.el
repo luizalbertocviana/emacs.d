@@ -589,7 +589,8 @@
 ;; lsp mode
 (use-package lsp-mode
     :hook
-      (lsp-mode . lsp-enable-which-key-integration)
+      (lsp-mode    . lsp-enable-which-key-integration)
+      (python-mode . lsp)
     :config
       (use-package lsp-ui)
     :init
