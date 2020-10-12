@@ -626,12 +626,9 @@
   :hook
     (haskell-mode . interactive-haskell-mode))
 
-;; rust setup
-(use-package rust-mode
-  :hook
-    (rust-mode . racer-mode)
-  :config
-    (use-package racer))
+(use-package rustic
+      :custom
+        (rustic-lsp-client 'eglot))
 
 ;; simple and effective interface to google translation service
 (use-package google-translate)
@@ -1341,16 +1338,22 @@ only one in the current frame, kill the frame instead"
         "i" 'hy-jedhy-update-imports
         "r" 'run-hy
     )
-    ;; rust mode
+    ;; rustic mode
     (general-define-key
       :states  '(normal)
-      :keymaps '(rust-mode-map)
+      :keymaps '(rustic-mode-map)
       :prefix  "SPC m"
-        "b" 'compile
-        "d" 'rust-dbg-wrap-or-unwrap
+        "D a" 'rustic-cargo-add
+        "D r" 'rustic-cargo-rm
+        "D u" 'rustic-cargo-upgrade
+        "b" 'rustic-compile
+        "c" 'rustic-cargo-clippy
+        "d" 'xref-find-definitions
         "e" 'next-error
-        "f" 'rust-format-buffer
-        "r" 'recompile
+        "f" 'rustic-format-buffer
+        "m" 'rustic-popup
+        "r" 'rustic-cargo-run
+        "t" 'rustic-cargo-test
     )
     ;; haskell mode
     (general-define-key
