@@ -589,19 +589,15 @@
 ;; lsp mode
 (use-package lsp-mode
     :hook
-      (lsp-mode    . lsp-enable-which-key-integration)
-      (python-mode . lsp)
+      (lsp-mode     . lsp-enable-which-key-integration)
+      (python-mode  . lsp)
+      (c++-mode     . lsp)
+      (haskell-mode . lsp)
     :config
       (use-package lsp-ui)
     :init
-      ;; c++
-      (use-package ccls
-        :hook
-          (c++-mode . lsp))
       ;; haskell
-      (use-package lsp-haskell
-        :hook
-          (haskell-mode . lsp)))
+      (use-package lsp-haskell))
 
 ;; yasnippet
 (use-package yasnippet
