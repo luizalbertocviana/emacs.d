@@ -213,7 +213,9 @@
   :config
     (evil-mode)
     ;; undo similar to vim's
-    (global-undo-tree-mode)
+    (use-package undo-tree
+      :config
+        (global-undo-tree-mode))
     ;; ex commands, which a vim user is likely to be familiar with
     (use-package evil-expat :defer t)
     ;; visual editing hints
