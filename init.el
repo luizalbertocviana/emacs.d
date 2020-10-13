@@ -1342,16 +1342,17 @@ only one in the current frame, kill the frame instead"
       :states  '(normal)
       :keymaps '(rustic-mode-map)
       :prefix  "SPC m"
+        "C" 'rustic-cargo-clippy
         "D a" 'rustic-cargo-add
         "D r" 'rustic-cargo-rm
         "D u" 'rustic-cargo-upgrade
-        "b" 'rustic-compile
-        "c" 'rustic-cargo-clippy
+        "b" 'rustic-cargo-run
+        "c" 'rustic-cargo-check
         "d" 'xref-find-definitions
         "e" 'next-error
         "f" 'rustic-format-buffer
         "m" 'rustic-popup
-        "r" 'rustic-cargo-run
+        "r" 'rustic-recompile
         "t" 'rustic-cargo-test
     )
     ;; haskell mode
