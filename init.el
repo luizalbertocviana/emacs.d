@@ -421,9 +421,13 @@
         (when (executable-find "fish")
           (add-to-list 'company-backends 'company-fish)
           (add-hook 'shell-mode-hook 'company-mode)
-          (add-hook 'eshell-mode-hook 'company-mode))
-    )
-)
+          (add-hook 'eshell-mode-hook 'company-mode)))
+    ;; yasnippet
+    (use-package yasnippet
+      :config
+        (use-package yasnippet-snippets)
+        (yas-global-mode 1)
+        (push '(company-capf :with company-yasnippet) company-backends)))
 
 ;; org
 (use-package org
@@ -598,11 +602,6 @@
     :init
       ;; haskell
       (use-package lsp-haskell))
-
-;; yasnippet
-(use-package yasnippet
-  :config
-    (yas-global-mode 1))
 
 ;; cmake mode
 (use-package cmake-mode)
