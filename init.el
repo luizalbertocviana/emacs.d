@@ -592,6 +592,8 @@
 
 ;; lsp mode
 (use-package lsp-mode
+    :custom
+      (lsp-restart 'auto-restart)
     :hook
       (lsp-mode     . lsp-enable-which-key-integration)
       (python-mode  . lsp)
