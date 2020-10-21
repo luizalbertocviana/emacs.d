@@ -629,7 +629,15 @@
     (haskell-mode . interactive-haskell-mode))
 
 ; rust setup
-(use-package rustic)
+(use-package rustic
+  :custom
+    (rustic-lsp-client nil)
+  :config
+    (use-package racer
+      :hook
+        (rustic-mode . racer-mode)
+        (racer-mode . eldoc-mode)
+        (company-mode . racer-mode)))
 
 ;; simple and effective interface to google translation service
 (use-package google-translate)
