@@ -152,7 +152,7 @@
 ;; colorscheme setup
 (use-package doom-themes
   :config
-    (load-theme 'doom-one t)
+    (load-theme 'doom-tomorrow-night t)
 )
 
 ;; mode line setup
