@@ -16,3 +16,16 @@
 /.lsp-session-v1
 /temp/
 /.#.lsp-session-v1
+/#functions.el#
+/common-lisp.el~
+/common.el~
+/evil-setup.el~
+/functions.el~
+/gnus.el~
+/gnus.org~
+/haskell-setup.el~
+/latex.el~
+/modeline.el~
+/options.el~
+/org.el~
+/rust-setup.el~
