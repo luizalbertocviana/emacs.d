@@ -823,9 +823,21 @@ only one in the current frame, kill the frame instead"
       :states  '(normal)
       :keymaps '(override)
       :prefix  "SPC v"
-        "V"   'magit-dispatch
-        "g"   'magit-status
-        "v"   'magit-file-dispatch
+        "V"     'magit-dispatch
+        "c"     '(:ignore t :which-key "conflict")
+        "c N"   'smerge-prev
+        "c R"   'smerge-resolve-all
+        "c k"   '(:ignore t :which-key "keep")
+        "c k a" 'smerge-keep-all
+        "c k b" 'smerge-keep-base
+        "c k c" 'smerge-keep-current
+        "c k l" 'smerge-keep-lower
+        "c k u" 'smerge-keep-upper
+        "c n"   'smerge-next
+        "c r"   'smerge-resolve
+        "c s"   'smerge-swap
+        "g"     'magit-status
+        "v"     'magit-file-dispatch
     )
     (general-define-key
       :states  '(normal)
