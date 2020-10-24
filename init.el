@@ -599,6 +599,7 @@
       (python-mode  . lsp)
       (c++-mode     . lsp)
       (haskell-mode . lsp)
+      (rustic-mode . lsp)
     :config
       (use-package lsp-ui)
     :init
