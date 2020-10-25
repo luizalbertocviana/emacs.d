@@ -32,3 +32,7 @@ only one in the current frame, kill the frame instead"
     (if dired-dwim-target
         (or other-dir this-dir)
       this-dir)))
+
+(defun lisp-correct-closing-quote ()
+  (sp-pair "'" nil :actions :rem)
+  (sp-pair "`" nil :actions :rem))

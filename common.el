@@ -1,16 +1,11 @@
 ;; manage matching pairs
 (use-package smartparens
-  :preface
-    (defun lisp-correct-closing-quote ()
-      (sp-pair "'" nil :actions :rem)
-      (sp-pair "`" nil :actions :rem))
   :config
     ;; the following package is installed automatically
     (use-package smartparens-config :straight nil)
     (smartparens-global-mode t)
     ;; highlights matching pairs
-    (show-smartparens-global-mode 1)
-    (add-hook 'lisp-mode-hook 'lisp-correct-closing-quote t t))
+    (show-smartparens-global-mode 1))
 
 ;; spell checking
 (use-package flyspell :defer t)

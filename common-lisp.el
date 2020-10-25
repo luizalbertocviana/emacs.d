@@ -4,6 +4,7 @@
   :custom
     (inferior-lisp-program "ros run"))
 
+(add-hook 'lisp-mode-hook 'lisp-correct-closing-quote t t)
 (general-define-key
  :states  '(normal)
  :keymaps '(lisp-mode-map sly-mrepl-mode-map)
