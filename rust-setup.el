@@ -2,6 +2,8 @@
   :custom
     (rustic-lsp-client nil))
 
+(add-hook 'rustic-mode-hook 'lsp t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(rustic-mode-map)

@@ -138,16 +138,9 @@
     :custom
       (lsp-restart 'auto-restart)
     :hook
-      (lsp-mode     . lsp-enable-which-key-integration)
-      (python-mode  . lsp)
-      (c++-mode     . lsp)
-      (haskell-mode . lsp)
-      (rustic-mode . lsp)
+      (lsp-mode . lsp-enable-which-key-integration)
     :config
-      (use-package lsp-ui)
-    :init
-      ;; haskell
-      (use-package lsp-haskell))
+      (use-package lsp-ui))
 
 ;; simple and effective interface to google translation service
 (use-package google-translate)

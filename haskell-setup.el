@@ -2,6 +2,10 @@
   :hook
     (haskell-mode . interactive-haskell-mode))
 
+(use-package lsp-haskell)
+
+(add-hook 'haskell-mode-hook 'lsp t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(haskell-mode-map)

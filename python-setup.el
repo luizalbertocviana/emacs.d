@@ -3,6 +3,8 @@
 ;; jupyter setup
 (use-package jupyter)
 
+(add-hook 'python-mode-hook 'lsp t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(python-mode-map)

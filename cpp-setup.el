@@ -1,3 +1,5 @@
+(add-hook 'c++-mode-hook 'lsp t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(c++-mode-map)
