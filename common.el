@@ -31,10 +31,7 @@
 (use-package rainbow-delimiters
   :commands (rainbow-delimiters-mode)
   :hook
-    (emacs-lisp-mode . rainbow-delimiters-mode)
-    (lisp-mode       . rainbow-delimiters-mode)
-    (clojure-mode    . rainbow-delimiters-mode)
-    (hy-mode         . rainbow-delimiters-mode))
+    (emacs-lisp-mode . rainbow-delimiters-mode))
 
 ;; ivy, providing some completion facilities to certain emacs contexts
 (use-package ivy

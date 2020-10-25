@@ -5,6 +5,8 @@
     (inferior-lisp-program "ros run"))
 
 (add-hook 'lisp-mode-hook 'lisp-correct-closing-quote t t)
+(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(lisp-mode-map sly-mrepl-mode-map)

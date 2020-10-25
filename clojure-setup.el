@@ -1,3 +1,5 @@
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode t nil)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(clojure-mode-map)
