@@ -1,6 +1,3 @@
-;; the functions below are intended to be used in i3wm keybindings
-;; with emacs --eval
-
 ;; creates a new eshell buffer
 (defun new-eshell ()
   (eshell t))

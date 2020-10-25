@@ -1,4 +1,3 @@
-;; evil mode setup
 (use-package evil
   :init
     (setq evil-search-module 'evil-search)

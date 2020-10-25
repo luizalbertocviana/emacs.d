@@ -10,7 +10,7 @@
     (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
     (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
     (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-    ;; chords to avoid reaching to shift key
+    ;; chords to avoid reaching for shift key
     (key-chord-define evil-insert-state-map "qq" "/")
     (key-chord-define evil-insert-state-map "ww" "?")
     (key-chord-define evil-insert-state-map "''" "\"")
