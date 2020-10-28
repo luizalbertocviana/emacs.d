@@ -48,31 +48,32 @@
 ;; (load "gnus-setup")
 
 ;; LaTeX setup
-(load "latex")
+(load "lang/latex")
 
 ;; cpp setup
-(load "cpp-setup")
+(load "lang/cpp")
 
 ;; clojure setup
-;; (load "clojure-setup")
+;; (load "lang/clojure")
 
 ;; common lisp setup
-;; (load "common-lisp")
+;; (load "lang/lisp")
 
 ;; cmake setup
-(load "cmake")
+(load "lang/cmake")
 
 ;; python setup
-(load "python-setup")
+(load "lang/python")
 
 ;; hy setup
-;; (load "hy")
+;; (load "lang/hy")
 
 ;; haskell setup
-(load "haskell-setup")
+(load "lang/haskell")
 
 ;; rust setup
-(load "rust-setup")
+(load "lang/rust-racer")
+;; (load "lang/rust-lsp")
 
 ;; after initialization, revert startup preparations
 (setq gc-cons-threshold 16777216
