@@ -32,3 +32,5 @@
 /#keybindings.el#
 /cpp-setup.el~
 /gnus-setup.el~
+/lang/rust-racer.el~
+/rust-setup-racer.el~
