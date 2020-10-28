@@ -56,7 +56,7 @@
 (setq scroll-margin 20)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "monaco-10"))
+(add-to-list 'default-frame-alist '(font . "Fira Code-10"))
 
 ;; line numbers setup
 ;; relative line numbering
