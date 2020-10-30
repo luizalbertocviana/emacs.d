@@ -125,7 +125,7 @@
  "r"   'org-agenda-redo
  "t"   'org-agenda-todo
  "u"   'org-agenda-undo
- "h"   'kill-buffer-and-frame-or-window
+ "h"   'org-agenda-quit
  "j"   'org-agenda-next-item
  "k"   'org-agenda-previous-item
  "l"   'org-agenda-show-and-scroll-up
