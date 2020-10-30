@@ -48,7 +48,7 @@
 ;; (load "gnus-setup")
 
 ;; LaTeX setup
-(load "lang/latex")
+(load "lang/latex-auctex")
 
 ;; cpp setup
 (load "lang/cpp")
