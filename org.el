@@ -125,7 +125,7 @@
  "r"   'org-agenda-redo
  "t"   'org-agenda-todo
  "u"   'org-agenda-undo
- "h"   'org-agenda-quit
+ "h"   'org-agenda-Quit
  "j"   'org-agenda-next-item
  "k"   'org-agenda-previous-item
  "l"   'org-agenda-show-and-scroll-up
