@@ -39,6 +39,8 @@
           '(("c" "Capture" entry (file+datetree  "~/Dropbox/org/notes.org")
               "* TODO %? %^g\n  SCHEDULED: %^{Scheduled}t DEADLINE: %^{Deadline}t"))))
 
+(setq org-agenda-restore-windows-after-quit t)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(override)
@@ -125,7 +127,7 @@
  "r"   'org-agenda-redo
  "t"   'org-agenda-todo
  "u"   'org-agenda-undo
- "h"   'org-agenda-Quit
+ "h"   'org-agenda-exit
  "j"   'org-agenda-next-item
  "k"   'org-agenda-previous-item
  "l"   'org-agenda-show-and-scroll-up
