@@ -14,7 +14,7 @@
 (fset 'y-or-n-p (lambda (&rest args) t))
 
 ;; directory containing the following files
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 ;; setting some options
 (load "options")
