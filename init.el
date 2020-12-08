@@ -44,6 +44,9 @@
 ;; org setup
 (load "org")
 
+;; vterm (a better terminal emulator for emacs)
+;; (load "vterm")
+
 ;; gnus setup
 ;; (load "gnus-setup")
 
