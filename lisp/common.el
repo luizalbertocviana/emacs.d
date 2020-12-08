@@ -122,9 +122,6 @@
 (use-package magit
   :commands (magit-status magit-dispatch))
 
-;; vterm
-(use-package vterm)
-
 ;; lsp mode
 (use-package lsp-mode
     :custom

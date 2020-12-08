@@ -70,7 +70,6 @@
       :keymaps '(override)
       :prefix  "SPC t"
         "t" 'eshell
-        "T" 'vterm
     )
     ;; help menu
     (general-define-key
