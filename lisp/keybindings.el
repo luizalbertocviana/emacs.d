@@ -61,7 +61,7 @@
         "a"   'counsel-linux-app
         "c"   'calendar
         "i"   'imenu
-        "q"   'delete-frame
+        "q"   'save-buffers-kill-terminal
         "r"   'async-shell-command
     )
     ;; terminal menu
