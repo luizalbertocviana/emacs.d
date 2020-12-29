@@ -76,8 +76,8 @@
 (load "lang/haskell")
 
 ;; rust setup
-(load "lang/rust-racer")
-;; (load "lang/rust-lsp")
+;; (load "lang/rust-racer")
+(load "lang/rust-lsp")
 
 ;; after initialization, revert startup preparations
 (setq gc-cons-threshold 16777216
