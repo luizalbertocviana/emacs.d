@@ -61,7 +61,7 @@
 ;; (load "lang/clojure")
 
 ;; common lisp setup
-;; (load "lang/lisp")
+(load "lang/lisp")
 
 ;; cmake setup
 (load "lang/cmake")
