@@ -95,6 +95,7 @@
     (after-init . global-company-mode)
   :custom
     (company-idle-delay 0)
+    (company-transformers '(company-sort-prefer-same-case-prefix))
   :config
     ;; displays a help popup window
     (use-package company-quickhelp
