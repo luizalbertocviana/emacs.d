@@ -119,6 +119,20 @@
         (yas-global-mode 1)
         (push '(company-capf :with company-yasnippet) company-backends)))
 
+;; better company/ivy autocompletion
+(use-package prescient
+  :config
+    ;; ivy integration
+    (use-package ivy-prescient
+      :config
+        (ivy-prescient-mode))
+    ;; company integration
+    (use-package company-prescient
+      :config
+      (company-prescient-mode))
+    ;; remember autocompletion choices made in previous emacs sessions
+    (prescient-persist-mode))
+
 ;; magit
 (use-package magit
   :commands (magit-status magit-dispatch))
