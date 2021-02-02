@@ -6,6 +6,8 @@
 
 (add-hook 'haskell-mode-hook 'lsp t nil)
 
+(add-hook 'haskell-interactive-mode-hook 'clear-repl-hook)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(haskell-mode-map)
