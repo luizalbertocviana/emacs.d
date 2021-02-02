@@ -27,6 +27,10 @@
     (key-chord-define evil-insert-state-map "==" "+")
     (key-chord-define evil-insert-state-map "[[" "{"))
 
+;; makes C-c C-l be bound to clear-repl in normal and insert modes
+(add-hook 'eshell-mode-hook 'clear-repl-hook)
+(add-hook 'comint-mode-hook 'clear-repl-hook)
+
 ;; keybindings
 (use-package general
   :config
