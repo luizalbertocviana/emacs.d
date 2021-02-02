@@ -33,3 +33,18 @@ only one in the current frame, kill the frame instead"
 (defun lisp-correct-closing-quote ()
   (sp-pair "'" nil :actions :rem)
   (sp-pair "`" nil :actions :rem))
+
+(defun clear-repl ()
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (cond
+     ((equal major-mode 'eshell-mode)
+      (eshell-send-input))
+     ((equal major-mode 'haskell-interactive-mode)
+      (haskell-interactive-mode-return))
+     (t (comint-send-input)))))
+
+(defun clear-repl-hook ()
+  (evil-local-set-key 'normal (kbd "C-c C-l") 'clear-repl)
+  (evil-local-set-key 'insert (kbd "C-c C-l") 'clear-repl))
