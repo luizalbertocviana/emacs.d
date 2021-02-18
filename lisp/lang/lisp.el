@@ -23,6 +23,7 @@
  "e" 'sly-expand-1
  "f" 'sly-compile-defun
  "h" 'sly-describe-symbol
+ "i" 'sly-inspect
  "l" 'sly-load-file
  "m" 'sly-who-macroexpands
  "r" 'sly
