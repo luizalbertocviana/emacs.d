@@ -76,10 +76,6 @@
 ;; in prog mode, enable hideshow mode (see keybindings)
 (add-hook 'prog-mode-hook 'hs-minor-mode)
 
-;; force vertical splittimg, that is, windows are arranged one above
-;; another
-(setq split-width-threshold nil)
-
 ;; makes docview scrolling change document pages
 (setq doc-view-continuous t)
 
