@@ -14,6 +14,7 @@
  "A" 'sly-disassemble-symbol
  "C" 'sly-calls-who
  "D" 'sly-edit-uses
+ "H" 'sly-hyperspec-lookup
  "S" 'sly-stickers-replay
  "T" 'sly-trace-dialog
  "a" 'sly-apropos-all
