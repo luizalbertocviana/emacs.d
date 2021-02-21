@@ -13,20 +13,22 @@
  :prefix  "SPC m"
  "A" 'sly-disassemble-symbol
  "C" 'sly-calls-who
- "D" 'sly-edit-uses
  "H" 'sly-hyperspec-lookup
+ "R" 'sly-restart-inferior-lisp
  "S" 'sly-stickers-replay
  "T" 'sly-trace-dialog
  "a" 'sly-apropos-all
  "b" 'sly-compile-and-load-file
- "c" 'sly-who-calls
+ "c" 'sly-edit-uses
  "d" 'sly-edit-definition
- "e" 'sly-expand-1
+ "e" 'sly-eval-last-expression
  "f" 'sly-compile-defun
  "h" 'sly-describe-symbol
  "i" 'sly-inspect
  "l" 'sly-load-file
- "m" 'sly-who-macroexpands
+ "m" 'sly-expand-1
+ "n" 'sly-mrepl-new
+ "o" 'sly-scratch
  "r" 'sly
  "s" 'sly-stickers-dwim
  "t" 'sly-trace-dialog-toggle-trace
