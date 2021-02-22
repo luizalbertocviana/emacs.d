@@ -25,6 +25,9 @@
     (key-chord-define evil-insert-state-map "00" ")")
     (key-chord-define evil-insert-state-map "--" "_")
     (key-chord-define evil-insert-state-map "==" "+")
+    (key-chord-define evil-insert-state-map ",," "<")
+    (key-chord-define evil-insert-state-map ".." ">")
+    (key-chord-define evil-insert-state-map ";;" ":")
     (key-chord-define evil-insert-state-map "[[" "{"))
 
 ;; makes C-c C-l be bound to clear-repl in normal and insert modes
