@@ -47,7 +47,11 @@
       :custom
         (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
       :config
-        (ivy-posframe-mode 1)))
+        (ivy-posframe-mode 1))
+    (use-package ivy-rich
+      :config
+        (ivy-rich-mode)
+        (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)))
 
 ;; projectile
 (use-package projectile
