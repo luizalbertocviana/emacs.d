@@ -41,6 +41,9 @@
 ;; keybindings setup
 (load "keybindings")
 
+;; ivy setup
+(load "ivy-setup")
+
 ;; org setup
 (load "org")
 

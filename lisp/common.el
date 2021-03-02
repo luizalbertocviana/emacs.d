@@ -33,26 +33,6 @@
   :hook
     (emacs-lisp-mode . rainbow-delimiters-mode))
 
-;; ivy, providing some completion facilities to certain emacs contexts
-(use-package ivy
-  :custom
-    (ivy-use-virtual-buffers t)
-    (enable-recursive-minibuffers t)
-  :config
-    (ivy-mode 1)
-    (use-package counsel
-      :config
-        (counsel-mode 1))
-    (use-package ivy-posframe
-      :custom
-        (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
-      :config
-        (ivy-posframe-mode 1))
-    (use-package ivy-rich
-      :config
-        (ivy-rich-mode)
-        (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)))
-
 ;; projectile
 (use-package projectile
   :custom
