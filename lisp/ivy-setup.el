@@ -21,7 +21,13 @@
 ;; ivy minibuffer
 (general-define-key
   :keymaps '(ivy-minibuffer-map ivy-switch-buffer-map)
+    "C-a" 'ivy-dispatching-done
+    "C-b" 'ivy-occur
     "C-h" 'keyboard-escape-quit
+    "C-i" 'ivy-insert-current
     "C-j" 'ivy-next-line
     "C-k" 'ivy-previous-line
-    "C-l" 'ivy-alt-done)
+    "C-l" 'ivy-alt-done
+    "M-j" 'ivy-next-history-element
+    "M-k" 'ivy-previous-history-element
+    "RET" 'ivy-immediate-done)
