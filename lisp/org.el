@@ -4,6 +4,10 @@
     ;; provides some completion in org mode
     (org-mode . (lambda () (add-hook 'completion-at-point-functions 'pcomplete-completions-at-point nil t)))
   :custom
+    ;; suddenly this workaraound has been made needed so
+    ;; org-agenda-exit stays working properly. For some reason, this
+    ;; variable had been initialized as a string value
+    (org-agenda-new-buffers nil)
     ;; runs code snippets with no confirmation prompt
     (org-confirm-babel-evaluate nil)
     (org-log-done t)
