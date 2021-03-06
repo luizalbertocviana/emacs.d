@@ -258,17 +258,24 @@
       :states  '(normal visual)
       :keymaps '(override)
       :prefix  "SPC p"
-        "R" 'xref-find-references
-        "b" 'compile
-        "c" 'comment-line
-        "d" 'xref-find-definitions
-        "e" 'next-error
-        "f" 'mark-defun
-        "p" 'check-parens
-        "r" 'recompile
+        "R"   'xref-find-references
+        "b"   'compile
+        "c"   'comment-line
+        "d"   'xref-find-definitions
+        "e"   'next-error
+        "f"   'mark-defun
+        "l"   '(:ignore t :which-key "lsp")
+        "l R" 'lsp-workspace-restart
+        "l a" 'lsp-execute-code-action
+        "l f" 'lsp-format-buffer
+        "l i" 'lsp-organize-imports
+        "l q" 'lsp-workspace-shutdown
+        "l r" 'lsp-rename
+        "p"   'check-parens
+        "r"   'recompile
         ;; these only work in prog mode (or if you enable hs-minor-mode)
-        "H" 'hs-hide-all
-        "h" 'hs-toggle-hiding
+        "H"   'hs-hide-all
+        "h"   'hs-toggle-hiding
     )
     ;; cursor character-wise movements in insert mode
     (general-define-key
