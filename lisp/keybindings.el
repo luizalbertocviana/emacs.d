@@ -311,6 +311,17 @@
         "p" (general-simulate-key "p" :state 'emacs)
         "l" 'dashboard-return
     )
+    ;; xref
+    (general-define-key
+      :states '(normal)
+      :keymaps 'xref--xref-buffer-mode-map
+        "RET" 'xref-quit-and-goto-xref
+        "h"   'quit-window
+        "j"   'xref-next-line
+        "k"   'xref-prev-line
+        "l"   'xref-show-location-at-point
+        "r"   'xref-revert-buffer
+    )
     ;; dired
     (general-define-key
       :states  '(normal)
