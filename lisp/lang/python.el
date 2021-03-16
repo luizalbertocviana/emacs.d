@@ -3,7 +3,11 @@
 ;; jupyter setup
 (use-package jupyter)
 
-(add-hook 'python-mode-hook 'lsp t nil)
+;; lsp-pyright setup
+(use-package lsp-pyright
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                         (lsp))))
 
 (general-define-key
  :states  '(normal)
