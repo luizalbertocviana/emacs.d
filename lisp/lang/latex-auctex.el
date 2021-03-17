@@ -26,7 +26,7 @@
     (TeX-source-correlate-start-server t)
   :config
     (defcustom LaTeX-inhibited-auto-fill-environments
-      '("tabular" "tikzpicture")
+      '("tabular" "tikzpicture" "align")
       "latex environments where auto-fill is disabled")
     (defun LaTeX-inhibited-auto-fill-environment-p (environment)
       (member environment LaTeX-inhibited-auto-fill-environments))
