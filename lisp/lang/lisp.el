@@ -7,6 +7,12 @@
 (add-hook 'lisp-mode-hook 'lisp-correct-closing-quote t t)
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode t nil)
 
+(defun eval-last-expression-inplace ()
+  "evaluates expression and puts its result just after it"
+  (interactive)
+  (let ((current-prefix-arg 1))
+    (call-interactively #'sly-eval-last-expression)))
+
 (general-define-key
  :states  '(normal)
  :keymaps '(lisp-mode-map sly-mrepl-mode-map)
@@ -21,7 +27,7 @@
  "b" 'sly-compile-and-load-file
  "c" 'sly-edit-uses
  "d" 'sly-edit-definition
- "e" 'sly-eval-last-expression
+ "e" 'eval-last-expression-inplace
  "f" 'sly-compile-defun
  "h" 'sly-describe-symbol
  "i" 'sly-inspect
