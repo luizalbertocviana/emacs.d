@@ -1,8 +1,5 @@
 (setq python-indent-offset 4)
 
-;; jupyter setup
-(use-package jupyter)
-
 ;; lsp-pyright setup
 (use-package lsp-pyright
   :hook (python-mode . (lambda ()
