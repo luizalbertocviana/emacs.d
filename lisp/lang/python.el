@@ -10,8 +10,6 @@
  :states  '(normal)
  :keymaps '(python-mode-map)
  :prefix  "SPC m"
- "b" 'jupyter-eval-buffer
- "d" 'jupyter-inspect-at-point
- "f" 'jupyter-eval-defun
- "r" 'jupyter-run-repl
+ "b" 'python-shell-send-buffer
+ "r" 'run-python
  )
