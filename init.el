@@ -82,6 +82,9 @@
 ;; (load "lang/rust-racer")
 (load "lang/rust-lsp")
 
+;; csharp setup
+(load "lang/csharp")
+
 ;; after initialization, revert startup preparations
 (setq gc-cons-threshold 16777216
       gc-cons-percentage 0.1
