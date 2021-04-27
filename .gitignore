@@ -42,3 +42,6 @@
 /var/
 /.#places
 /lisp/ivy-setup.el~
+/.cache/
+/bookmarks~
+/lisp/lang/csharp.el~
