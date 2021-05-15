@@ -85,6 +85,9 @@
 ;; csharp setup
 (load "lang/csharp")
 
+;; support for web programming
+(load "lang/web")
+
 ;; after initialization, revert startup preparations
 (setq gc-cons-threshold 16777216
       gc-cons-percentage 0.1
