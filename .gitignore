@@ -45,3 +45,5 @@
 /.cache/
 /bookmarks~
 /lisp/lang/csharp.el~
+/lisp/lang/web.el~
+/lisp/lang/javascript-typescript.el~
