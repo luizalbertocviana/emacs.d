@@ -90,7 +90,11 @@
       :config
         (use-package yasnippet-snippets)
         (yas-global-mode 1)
-        (push '(company-capf :with company-yasnippet) company-backends)))
+        ;; (push '(company-capf :with company-yasnippet) company-backends)
+        )
+    ;; tabnine
+    (use-package company-tabnine)
+    (push '(company-capf company-tabnine company-yasnippet) company-backends))
 
 ;; better company/ivy autocompletion
 (use-package prescient
