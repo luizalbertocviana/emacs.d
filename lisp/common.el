@@ -79,7 +79,6 @@
     (after-init . global-company-mode)
   :custom
     (company-idle-delay 0)
-    (company-transformers '(company-sort-prefer-same-case-prefix))
   :config
     ;; displays a help popup window
     (use-package company-quickhelp
@@ -89,9 +88,7 @@
     (use-package yasnippet
       :config
         (use-package yasnippet-snippets)
-        (yas-global-mode 1)
-        ;; (push '(company-capf :with company-yasnippet) company-backends)
-        )
+        (yas-global-mode 1))
     ;; tabnine
     (use-package company-tabnine)
     (push '(company-capf company-tabnine company-yasnippet) company-backends))
