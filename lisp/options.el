@@ -15,11 +15,7 @@
 (tool-bar-mode -1)
 
 ;; disable scroll bars in every frame
-(add-hook 'after-make-frame-functions
-          (lambda (frame)
-            (modify-frame-parameters frame
-                                     '((vertical-scroll-bars   . nil)
-                                       (horizontal-scroll-bars . nil)))))
+(toggle-scroll-bar -1)
 
 ;; dont use dialog boxes, use minibuffer instead
 (setq use-dialog-box nil)
