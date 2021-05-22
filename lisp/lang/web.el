@@ -11,7 +11,17 @@
   :config
     (skewer-setup))
 
-(use-package emmet-mode
+(use-package emmet-mode)
+
+(use-package web-mode
   :hook
-    (sgml-mode . emmet-mode)
-    (css-mode . emmet-mode))
+    (web-mode . lsp)
+    (web-mode . emmet-mode)
+    (web-mode . skewer-mode)
+  :custom
+    (web-mode-auto-close-style 2)
+    (web-mode-enable-auto-expanding t)
+  :init
+    (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+  :config
+    (sp-local-pair 'web-mode "<" ">" :actions :rem))
