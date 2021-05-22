@@ -73,6 +73,19 @@
 (use-package biblio
   :commands (biblio-lookup))
 
+;; text objects for latex: this shows that defining new text
+;; objects is not hard at all
+;; a$
+(evil-define-text-object evil-a-dollar (count &optional beg end type)
+  :extend-selection t
+  (evil-select-quote ?$ beg end type count t))
+(define-key evil-outer-text-objects-map "$" 'evil-a-dollar)
+;; i$
+(evil-define-text-object evil-i-dollar (count &optional beg end type)
+  :extend-selection nil
+  (evil-select-quote ?$ beg end type count nil))
+(define-key evil-inner-text-objects-map "$" 'evil-i-dollar)
+
 (general-define-key
  :states  '(normal visual)
  :keymaps 'LaTeX-mode-map

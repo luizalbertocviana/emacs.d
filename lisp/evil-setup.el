@@ -74,19 +74,8 @@
       "Q" (kbd ":norm @q RET"))
     ;; makes TAB indent current line or selected text
     (define-key evil-normal-state-map (kbd "TAB") 'indent-for-tab-command)
-    (define-key evil-visual-state-map (kbd "TAB") 'indent-for-tab-command)
-    ;; text objects for latex: this shows that defining new text
-    ;; objects is not hard at all
-    ;; a$
-    (evil-define-text-object evil-a-dollar (count &optional beg end type)
-      :extend-selection t
-      (evil-select-quote ?$ beg end type count t))
-    (define-key evil-outer-text-objects-map "$" 'evil-a-dollar)
-    ;; i$
-    (evil-define-text-object evil-i-dollar (count &optional beg end type)
-      :extend-selection nil
-      (evil-select-quote ?$ beg end type count nil))
-    (define-key evil-inner-text-objects-map "$" 'evil-i-dollar))
+    (define-key evil-visual-state-map (kbd "TAB") 'indent-for-tab-command))
+
 ;; vim undo redo
 (use-package undo-fu
   :config
