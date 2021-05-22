@@ -73,6 +73,16 @@
         (ls-lisp-dirs-first t)
         (ls-lisp-use-insert-directory-program nil)))
 
+;; colorful dired
+(use-package diredfl
+  :config
+    (diredfl-global-mode))
+
+;; version control hints in fringe
+(use-package diff-hl
+  :config
+    (global-diff-hl-mode))
+
 ;; displays keybindings
 (use-package which-key
   :config
