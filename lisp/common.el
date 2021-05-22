@@ -7,6 +7,11 @@
     ;; highlights matching pairs
     (show-smartparens-global-mode 1))
 
+(use-package smart-hungry-delete
+  :bind (("<backspace>" . smart-hungry-delete-backward-char))
+  :defer nil ;; dont defer so we can add our functions to hooks 
+  :config (smart-hungry-delete-add-default-hooks))
+
 ;; spell checking
 (use-package flyspell :defer t)
 
