@@ -31,10 +31,6 @@
     (setq evil-visual-state-cursor '(box "yellow"))
   :config
     (evil-mode)
-    ;; undo similar to vim's
-    (use-package undo-tree
-      :config
-        (global-undo-tree-mode))
     ;; ex commands, which a vim user is likely to be familiar with
     (use-package evil-expat :defer t)
     ;; visual editing hints
@@ -91,3 +87,8 @@
       :extend-selection nil
       (evil-select-quote ?$ beg end type count nil))
     (define-key evil-inner-text-objects-map "$" 'evil-i-dollar))
+;; vim undo redo
+(use-package undo-fu
+  :config
+    (define-key evil-normal-state-map "u" 'undo-fu-only-undo)
+    (define-key evil-normal-state-map "\C-r" 'undo-fu-only-redo))
