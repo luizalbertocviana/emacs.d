@@ -10,21 +10,17 @@
     (js2-mode . tide-hl-identifier-mode)
     (before-save . tide-format-before-save))
 
-(use-package skewer-mode
-  :config
-    (skewer-setup))
+(use-package elnode)
 
 (use-package web-mode
   :hook
     (web-mode . lsp)
     (web-mode . emmet-mode)
-    (web-mode . skewer-mode)
   :custom
     (web-mode-auto-close-style 1)
     (web-mode-enable-auto-expanding t)
   :init
     (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
   :config
     (sp-local-pair 'web-mode "<" ">" :actions :rem))
 
@@ -34,6 +30,8 @@
           (lambda ()
             (define-key evil-normal-state-local-map (kbd "TAB") 'emmet-expand-line)
             (define-key evil-insert-state-local-map (kbd "TAB") 'emmet-expand-line)))
+
+(add-hook 'css-mode-hook 'lsp)
 
 (general-define-key
  :states  '(normal)
@@ -46,10 +44,14 @@
  "f"   'tide-format
  "h"   'tide-documentation-at-point
  "i"   'tide-organize-imports
- "l"   'skewer-load-buffer
  "r R" 'tide-refactor
  "r f" 'tide-rename-file
  "r r" 'tide-references
- "r s" 'tide-rename-symbol
- "s"   'run-skewer
- "z"   'skewer-repl)
+ "r s" 'tide-rename-symbol)
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(web-mode-map)
+ :prefix  "SPC m"
+ "w" 'elnode-make-webserver)
+
