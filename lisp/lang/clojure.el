@@ -1,3 +1,5 @@
+(use-package cider)
+
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode t nil)
 
 (general-define-key
