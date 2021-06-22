@@ -2,11 +2,18 @@
 
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode t nil)
 
+(defun start-cider-repl-with-profile ()
+  (interactive)
+  (let ((profile (read-string "Enter profile name: ")))
+    (set-variable 'cider-clojure-cli-aliases profile)
+    (cider-jack-in nil)))
+
 (general-define-key
  :states  '(normal)
  :keymaps '(clojure-mode-map)
  :prefix "SPC m"
  "L" 'cider-load-all-files
+ "R" 'start-cider-repl-with-profile
  "b" 'cider-load-buffer
  "d" 'cider-debug-defun-at-point
  "e" 'cider-macroexpand-1
