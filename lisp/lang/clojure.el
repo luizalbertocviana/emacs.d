@@ -23,3 +23,10 @@
  "l" 'cider-load-file
  "r" 'cider-jack-in
  )
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(cider-repl-mode-map)
+ :prefix "SPC m"
+ "n" 'cider-repl-set-ns
+ )
