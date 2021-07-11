@@ -346,26 +346,28 @@
       :states  '(normal)
       :keymaps 'dired-mode-map
       :prefix  "SPC m"
-        "D" 'dired-diff
-        "S" 'dired-do-symlink
-        "T" 'dired-toggle-marks
-        "U" 'dired-upcase
-        "Z" 'dired-do-compress
-        "c" 'wdired-change-to-wdired-mode
-        "d" 'dired-do-delete
-        "g" 'dired-do-chgrp
-        "h" 'dired-omit-mode
-        "i" (lambda () (interactive) (image-dired "./"))
-        "l" 'dired-downcase
-        "m" 'dired-do-chmod
-        "n" 'dired-create-directory
-        "o" 'dired-do-chown
-        "p" 'dired-do-print
-        "r" 'dired-do-rename
-        "s" 'dired-do-isearch-regexp
-        "t" 'dired-do-async-shell-command
-        "y" 'dired-do-copy
-        "z" 'dired-do-compress-to
+        "D"   'dired-diff
+        "S"   'dired-do-symlink
+        "T"   'dired-toggle-marks
+        "U"   'dired-upcase
+        "Z"   'dired-do-compress
+        "c"   'wdired-change-to-wdired-mode
+        "d"   'dired-do-delete
+        "g"   'dired-do-chgrp
+        "h"   'dired-omit-mode
+        "i"   (lambda () (interactive) (image-dired "./"))
+        "l"   'dired-downcase
+        "m"   'dired-do-chmod
+        "n"   'dired-create-directory
+        "o"   'dired-do-chown
+        "p"   'dired-do-print
+        "r"   'dired-do-rename
+        "s g" 'find-grep-dired
+        "s r" 'dired-do-query-replace-regexp
+        "s s" 'dired-do-isearch-regexp
+        "t"   'dired-do-async-shell-command
+        "y"   'dired-do-copy
+        "z"   'dired-do-compress-to
     )
     (general-define-key
       :states  '(normal)
