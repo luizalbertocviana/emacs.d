@@ -326,10 +326,14 @@
     (general-define-key
       :states  '(normal)
       :keymaps 'dired-mode-map
+        "H" 'dired-hide-details-mode
         "J" 'dired-next-marked-file
         "K" 'dired-prev-marked-file
         "M" 'dired-unmark
         "N" 'evil-ex-search-previous
+        "O" (lambda () (interactive)
+              (dired-subtree-toggle)
+              (revert-buffer))
         "U" 'dired-unmark-all-marks
         "h" (lambda () (interactive) (find-alternate-file ".."))
         "j" 'dired-next-line
