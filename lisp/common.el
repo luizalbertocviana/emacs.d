@@ -78,6 +78,9 @@
   :config
     (diredfl-global-mode))
 
+;; facilities to use subtrees in dired
+(use-package dired-subtree)
+
 ;; version control hints in fringe
 (use-package diff-hl
   :config
