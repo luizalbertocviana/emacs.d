@@ -125,6 +125,10 @@
     ;; remember autocompletion choices made in previous emacs sessions
     (prescient-persist-mode))
 
+;; for some reason it is not being automatically loaded anymore. This
+;; loads it manually as it is required by magit
+(use-package project)
+
 ;; magit
 (use-package magit
   :commands (magit-status magit-dispatch))
