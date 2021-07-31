@@ -88,6 +88,8 @@
 
 ;; displays keybindings
 (use-package which-key
+  :custom
+    (which-key-max-display-columns 4)
   :config
     (which-key-mode))
 
