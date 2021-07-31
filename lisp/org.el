@@ -44,6 +44,11 @@
 
 (setq org-agenda-restore-windows-after-quit t)
 
+(add-hook 'org-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map
+              (kbd "TAB") 'org-cycle)))
+
 (general-define-key
  :states  '(normal)
  :keymaps '(override)
