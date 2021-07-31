@@ -67,8 +67,6 @@
         "P"   'list-processes
         "a"   'counsel-linux-app
         "c"   'calendar
-        "h"   '(:ignore t :which-key "helm")
-        "h"   'helm-command-prefix
         "i"   'imenu
         "q"   'save-buffers-kill-terminal
         "r"   'async-shell-command
