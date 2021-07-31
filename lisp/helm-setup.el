@@ -1,5 +1,11 @@
 (use-package helm)
 
+(use-package helm-ls-git)
+
+;; (use-package helm-posframe
+;;   :config
+;;     (helm-posframe-enable))
+
 (general-define-key
  :states  '(normal)
  :keymaps '(override)
@@ -8,13 +14,14 @@
  "h F" 'helm-find
  "h H" 'helm-run-external-command
  "h I" 'helm-imenu-in-all-buffers
+ "h P" 'helm-list-emacs-process
  "h a" 'helm-apropos
  "h f" 'helm-multi-files
  "h g" 'helm-google-suggest
  "h h" 'helm-M-x
  "h i" 'helm-imenu
  "h m" 'helm-man-woman
- "h p" 'helm-list-emacs-process
+ "h p" 'helm-browse-project
  "h r" 'helm-regexp
  "h s" 'helm-occur
  "h t" 'helm-top
