@@ -44,11 +44,11 @@
       :prefix  "SPC"
         "TAB" '(:ignore t :which-key "last buffer")
         "SPC" '(:ignore t :which-key "more")
+        "H"   '(:ignore t :which-key "help")
         "S"   '(:ignore t :which-key "spell")
         "T"   '(:ignore t :which-key "text")
         "b"   '(:ignore t :which-key "buffers")
         "f"   '(:ignore t :which-key "files")
-        "h"   '(:ignore t :which-key "help")
         "m"   '(:ignore t :which-key "mode")
         "o"   '(:ignore t :which-key "org")
         "p"   '(:ignore t :which-key "program")
@@ -67,6 +67,8 @@
         "P"   'list-processes
         "a"   'counsel-linux-app
         "c"   'calendar
+        "h"   '(:ignore t :which-key "helm")
+        "h"   'helm-command-prefix
         "i"   'imenu
         "q"   'save-buffers-kill-terminal
         "r"   'async-shell-command
@@ -82,7 +84,7 @@
     (general-define-key
       :states '(normal)
       :leymaps '(override)
-      :prefix "SPC h"
+      :prefix "SPC H"
         "f" 'describe-function
         "h" 'help-for-help
         "k" 'describe-key

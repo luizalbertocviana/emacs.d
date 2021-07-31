@@ -41,8 +41,9 @@
 ;; keybindings setup
 (load "keybindings")
 
-;; ivy setup
+;; autocompletion framework setup
 (load "ivy-setup")
+(load "helm-setup")
 
 ;; org setup
 (load "org")
