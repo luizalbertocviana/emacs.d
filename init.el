@@ -89,6 +89,9 @@
 ;; support for web programming
 (load "lang/web")
 
+;; restclient
+(load "restclient")
+
 ;; docker setup
 (load "lang/docker")
 
