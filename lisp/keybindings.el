@@ -44,11 +44,13 @@
       :prefix  "SPC"
         "TAB" '(:ignore t :which-key "last buffer")
         "SPC" '(:ignore t :which-key "more")
-        "H"   '(:ignore t :which-key "help")
+        "P"   '(:ignore t :which-key "processes")
         "S"   '(:ignore t :which-key "spell")
         "T"   '(:ignore t :which-key "text")
         "b"   '(:ignore t :which-key "buffers")
         "f"   '(:ignore t :which-key "files")
+        "h"   '(:ignore t :which-key "help")
+        "i"   '(:ignore t :which-key "imenu")
         "m"   '(:ignore t :which-key "mode")
         "o"   '(:ignore t :which-key "org")
         "p"   '(:ignore t :which-key "program")
@@ -64,13 +66,28 @@
       :prefix  "SPC"
         "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
         "SPC" 'tmm-menubar
-        "P"   'helm-list-emacs-process
         "a"   'counsel-linux-app
         "c"   'calendar
         "g"   'helm-google-suggest
-        "i"   'helm-imenu
         "q"   'save-buffers-kill-terminal
         "r"   'async-shell-command
+        "x"   'helm-M-x
+    )
+    ;; imenu menu
+    (general-define-key
+      :states  '(normal)
+      :keymaps '(override)
+      :prefix  "SPC i"
+        "i" 'helm-imenu
+        "t" 'helm-top
+    )
+    ;; processes menu
+    (general-define-key
+      :states  '(normal)
+      :keymaps '(override)
+      :prefix  "SPC P"
+        "p" 'helm-list-emacs-process
+        "t" 'helm-top
     )
     ;; terminal menu
     (general-define-key
@@ -83,7 +100,9 @@
     (general-define-key
       :states '(normal)
       :leymaps '(override)
-      :prefix "SPC H"
+      :prefix "SPC h"
+        "M" 'helm-man-woman
+        "a" 'helm-apropos
         "f" 'describe-function
         "h" 'help-for-help
         "k" 'describe-key
@@ -234,6 +253,7 @@
       :keymaps '(override)
       :prefix  "SPC T"
         "A"     'align-regexp
+        "R"     'helm-regexp
         "S"     'sort-fields
         "a"     'align
         "c"     'capitalize-dwim
