@@ -7,19 +7,11 @@
  :keymaps '(override)
  :prefix  "SPC"
  "h"   '(:ignore t :which-key "helm")
- "h F" 'helm-find
- "h H" 'helm-run-external-command
- "h I" 'helm-imenu-in-all-buffers
- "h P" 'helm-list-emacs-process
  "h a" 'helm-apropos
- "h f" 'helm-multi-files
- "h g" 'helm-google-suggest
  "h h" 'helm-M-x
- "h i" 'helm-imenu
+ "h i" 'helm-imenu-in-all-buffers
  "h m" 'helm-man-woman
- "h p" 'helm-browse-project
  "h r" 'helm-regexp
- "h s" 'helm-occur
  "h t" 'helm-top
 )
 

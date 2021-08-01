@@ -64,10 +64,11 @@
       :prefix  "SPC"
         "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
         "SPC" 'tmm-menubar
-        "P"   'list-processes
+        "P"   'helm-list-emacs-process
         "a"   'counsel-linux-app
         "c"   'calendar
-        "i"   'imenu
+        "g"   'helm-google-suggest
+        "i"   'helm-imenu
         "q"   'save-buffers-kill-terminal
         "r"   'async-shell-command
     )
@@ -121,16 +122,19 @@
       :prefix  "SPC f"
         "D"   'diff-buffer-with-file
         "R"   'recover-this-file
-        "S"   'write-file
+        "S"   'helm-occur
         "U"   'revert-buffer
+        "d"   '(:ignore t :which-key "dired")
+        "d"   (lambda () (interactive) (dired "./"))
+        "f"   'helm-find
         "m"   'counsel-bookmark
-        "o"   '(:ignore t :which-key "dired")
-        "o"   (lambda () (interactive) (dired "./"))
+        "o"   'helm-multi-files
         "p c" 'projectile-commander
         "p g" 'projectile-grep
         "p o" 'projectile-find-file-dwim
-        "p p" 'projectile-switch-project
+        "p p" 'helm-browse-project
         "p r" 'projectile-replace-regexp
+        "p s" 'projectile-switch-project
         "p"   '(:ignore t :which-key "project")
         "r"   'counsel-recentf
         "s"   'save-buffer
