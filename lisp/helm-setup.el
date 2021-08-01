@@ -2,10 +2,6 @@
 
 (use-package helm-ls-git)
 
-;; (use-package helm-posframe
-;;   :config
-;;     (helm-posframe-enable))
-
 (general-define-key
  :states  '(normal)
  :keymaps '(override)
