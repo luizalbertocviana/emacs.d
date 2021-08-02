@@ -143,6 +143,3 @@
       (lsp-mode . lsp-enable-which-key-integration)
     :config
       (use-package lsp-ui))
-
-;; simple and effective interface to google translation service
-(use-package google-translate)
