@@ -2,6 +2,8 @@
 
 (use-package helm-ls-git)
 
+(use-package helm-lsp)
+
 (define-key helm-map (kbd "C-a") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-h") 'helm-keyboard-quit)
 (define-key helm-map (kbd "C-j") 'helm-next-line)

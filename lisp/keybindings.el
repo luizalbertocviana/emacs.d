@@ -290,11 +290,14 @@
         "f"   'mark-defun
         "l"   '(:ignore t :which-key "lsp")
         "l R" 'lsp-workspace-restart
-        "l a" 'lsp-execute-code-action
+        "l S" 'helm-lsp-global-workspace-symbol
+        "l a" 'helm-lsp-code-actions
+        "l d" 'helm-lsp-diagnostics
         "l f" 'lsp-format-buffer
         "l i" 'lsp-organize-imports
         "l q" 'lsp-workspace-shutdown
         "l r" 'lsp-rename
+        "l s" 'helm-lsp-workspace-symbol
         "p"   'check-parens
         "r"   'recompile
         ;; these only work in prog mode (or if you enable hs-minor-mode)
