@@ -78,8 +78,8 @@
       :states  '(normal)
       :keymaps '(override)
       :prefix  "SPC i"
+        "I" 'helm-imenu-in-all-buffers
         "i" 'helm-imenu
-        "t" 'helm-top
     )
     ;; processes menu
     (general-define-key
