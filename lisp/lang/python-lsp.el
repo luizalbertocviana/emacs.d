@@ -1,10 +1,12 @@
 (setq python-indent-offset 4)
 
-;; lsp-pyright setup
-(use-package lsp-pyright
-  :hook (python-mode . (lambda ()
-                         (require 'lsp-pyright)
-                         (lsp))))
+(use-package lsp-python-ms
+  :custom
+    (lsp-python-ms-auto-install-server t)
+  :hook
+    (python-mode . (lambda ()
+                     (require 'lsp-python-ms)
+                     (lsp))))
 
 (general-define-key
  :states  '(normal)
