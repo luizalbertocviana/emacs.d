@@ -17,3 +17,13 @@ HEADER should be just the name of the header, e.g.
                                     (progn
                                       (move-end-of-line 1)
                                       (point)))))
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(restclient-mode-map)
+ :prefix  "SPC m"
+   "c" 'restclient-copy-curl-command
+   "j" 'restclient-jump-next
+   "k" 'restclient-jump-prev
+   "r" 'restclient-http-send-current-stay-in-window
+ )
