@@ -45,42 +45,6 @@
   :config
     (projectile-mode +1))
 
-(use-package dired-aux :straight nil)
-
-;; dired file manager
-(use-package dired-x :straight nil
-  :hook
-    (dired-mode . dired-omit-mode)
-  :custom
-    ;; do what i mean, makes operations intuitive when there are two
-    ;; open dired buffers
-    (dired-dwim-target t)  
-    ;; dired does not change last modified timestamp when copying
-    ;; files
-    (dired-copy-preserve-time t)
-    ;; human readable sizes
-    (dired-listing-switches "-alh")
-  :config
-    ;; this command is disabled by default, but I like this better
-    ;; than 'dired-find-file
-    (put 'dired-find-alternate-file 'disabled nil)
-    ;; this prevents dot files from being listed (this cannot be put
-    ;; into a :custom section (dont know why))
-    (setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
-    ;; this makes dired list directories first
-    (use-package ls-lisp :straight nil
-      :custom
-        (ls-lisp-dirs-first t)
-        (ls-lisp-use-insert-directory-program nil)))
-
-;; colorful dired
-(use-package diredfl
-  :config
-    (diredfl-global-mode))
-
-;; facilities to use subtrees in dired
-(use-package dired-subtree)
-
 ;; version control hints in fringe
 (use-package diff-hl
   :config

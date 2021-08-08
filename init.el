@@ -28,6 +28,9 @@
 ;; commonly used packages
 (load "common")
 
+;; dired setup
+(load "dired-setup")
+
 ;; custom functions (needs to be loaded after common to override some
 ;; default functions)
 (load "functions")
