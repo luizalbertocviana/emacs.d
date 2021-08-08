@@ -4,20 +4,24 @@
 
 (add-hook 'rustic-mode-hook 'lsp t nil)
 
-(general-define-key
- :states  '(normal)
- :keymaps '(rustic-mode-map)
- :prefix  "SPC m"
- "C" 'rustic-cargo-clippy
- "D a" 'rustic-cargo-add
- "D r" 'rustic-cargo-rm
- "D u" 'rustic-cargo-upgrade
- "b" 'rustic-cargo-run
- "c" 'rustic-cargo-check
- "d" 'xref-find-definitions
- "e" 'next-error
- "f" 'rustic-format-buffer
- "m" 'rustic-popup
- "r" 'rustic-recompile
- "t" 'rustic-cargo-test
- )
+(defhydra rustic-dependency-hydra (rustic-mode-map nil :columns 4 :exit t)
+  ("a" rustic-cargo-add     "add")
+  ("r" rustic-cargo-rm      "remove")
+  ("u" rustic-cargo-upgrade "upgrade")
+)
+
+(defhydra rustic-hydra (rustic-mode-map nil :columns 4 :exit t)
+  ("C" rustic-cargo-clippy          "clippy")
+  ("D" rustic-dependency-hydra/body "dependencies") ; FIXME
+  ("b" rustic-cargo-run             "run")
+  ("c" rustic-cargo-check           "check")
+  ("d" xref-find-definitions        "find definition")
+  ("e" next-error                   "next error")
+  ("f" rustic-format-buffer         "format")
+  ("r" rustic-recompile             "recompile")
+  ("t" rustic-cargo-test            "test")
+)
+
+(general-define-key :states '(normal)
+                    :keymaps 'rustic-mode-map
+                    "SPC m" 'rustic-hydra/body)
