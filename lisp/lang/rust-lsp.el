@@ -4,13 +4,13 @@
 
 (add-hook 'rustic-mode-hook 'lsp t nil)
 
-(defhydra rustic-dependency-hydra (rustic-mode-map nil :columns 4 :exit t)
+(defhydra rustic-dependency-hydra (:columns 4 :exit t)
   ("a" rustic-cargo-add     "add")
   ("r" rustic-cargo-rm      "remove")
   ("u" rustic-cargo-upgrade "upgrade")
 )
 
-(defhydra rustic-hydra (rustic-mode-map nil :columns 4 :exit t)
+(defhydra rustic-hydra (:columns 4 :exit t)
   ("C" rustic-cargo-clippy          "clippy")
   ("D" rustic-dependency-hydra/body "dependencies") ; FIXME
   ("b" rustic-cargo-run             "run")

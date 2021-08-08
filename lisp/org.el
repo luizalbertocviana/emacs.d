@@ -58,7 +58,7 @@
  "c" 'org-capture
  )
 
-(defhydra org-heading-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-heading-hydra (:columns 4 :exit t)
   "org headings"
   ("h" org-promote-subtree   "promote subtree")
   ("l" org-demote-subtree    "demote subtree")
@@ -69,13 +69,13 @@
   ("p" org-paste-subtree     "paste subtree")
 )
 
-(defhydra org-link-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-link-hydra (:columns 4 :exit t)
   "org links"
   ("o" org-open-at-point "open")
   ("i" org-insert-link   "insert")
   )
 
-(defhydra org-spreadsheet-column-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-spreadsheet-column-hydra (:columns 4 :exit t)
   "org spreadsheet column"
   ("h" org-table-move-column-left   "move left")
   ("l" org-table-move-column-right  "move right")
@@ -83,7 +83,7 @@
   ("i" org-table-move-insert-column "insert")
   )
 
-(defhydra org-spreadsheet-row-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-spreadsheet-row-hydra (:columns 4 :exit t)
   "org spreadsheet row"
   ("k" org-table-move-row-up     "move up")
   ("j" org-table-move-row-down   "move down")
@@ -92,7 +92,7 @@
   ("h" org-table-hline-and-move  "insert hline")
   )
 
-(defhydra org-spreadsheet-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-spreadsheet-hydra (:columns 4 :exit t)
   "org spreadsheet"
   ("d" org-table-blank-field                "blank field")
   ("s" org-table-sort-lines                 "sort lines")
@@ -106,7 +106,7 @@
   ("r" org-spreadsheet-row-hydra/body       "rows")
   )
 
-(defhydra org-todo-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-todo-hydra (:columns 4 :exit t)
   "org todo"
   ("c" org-todo "change")
   ("d" org-deadline "deadline")
@@ -117,7 +117,7 @@
   ("t" org-show-todo-tree "show todo tree")
   )
 
-(defhydra org-hydra (org-mode-map nil :columns 4 :exit t)
+(defhydra org-hydra (:columns 4 :exit t)
   "org"
   ("D" org-time-stamp               "active timestamp")
   ("d" org-time-stamp-inactive      "inactive timestamp")

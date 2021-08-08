@@ -56,14 +56,14 @@
     "y" 'dired-copy-filename-as-kill
 )
 
-(defhydra dired-search-hydra (dired-mode-map nil :columns 4 :exit t)
+(defhydra dired-search-hydra (:columns 4 :exit t)
   "dired search"
   ("g" find-grep-dired               "grep")
   ("r" dired-do-query-replace-regexp "query replace regexp")
   ("s" dired-do-isearch-regexp       "search regexp")
 )
 
-(defhydra dired-hydra (dired-mode-map nil :columns 4 :exit t)
+(defhydra dired-hydra (:columns 4 :exit t)
   "dired"
   ("D" dired-diff                                   "diff")
   ("S" dired-do-symlink                             "symlink")
