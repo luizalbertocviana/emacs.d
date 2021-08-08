@@ -57,59 +57,84 @@
  "a" 'org-agenda-list
  "c" 'org-capture
  )
-(general-define-key
- :states  '(normal)
- :keymaps 'org-mode-map
- :prefix  "SPC m"
- ;; timestamps
- "D"     'org-time-stamp
- "d"     'org-time-stamp-inactive
- ;; sorting
- "S"     'org-sort
- ;; editing
- "c"     'org-edit-special
- ;; exporting
- "e"   'org-export-dispatch
- ;; headings
- "h h"   'org-promote-subtree
- "h l"   'org-demote-subtree
- "h k"   'org-move-subtree-up
- "h j"   'org-move-subtree-down
- "h d"   'org-cut-subtree
- "h y"   'org-copy-subtree
- "h p"   'org-paste-subtree
- ;; links
- "l o"   'org-open-at-point
- "l l"   'org-insert-link
- ;; run source block
- "r"     'org-babel-execute-src-block
- ;; spreadsheet
- "s d"   'org-table-blank-field
- "s s"   'org-table-sort-lines
- "s u"   'org-table-iterate-buffer-tables
- "s v"   'org-table-toggle-coordinate-overlays
- "s h"   'org-table-move-cell-left
- "s j"   'org-table-move-cell-down
- "s k"   'org-table-move-cell-up
- "s l"   'org-table-move-cell-right
- "s c h" 'org-table-move-column-left
- "s c l" 'org-table-move-column-right
- "s c d" 'org-table-delete-column
- "s c i" 'org-table-insert-column
- "s r k" 'org-table-move-row-up
- "s r j" 'org-table-move-row-down
- "s r d" 'org-table-kill-row
- "s r o" 'org-table-insert-row
- "s r h" 'org-table-hline-and-move
- ;; todo
- "t c"   'org-todo
- "t d"   'org-deadline
- "t a"   'org-toggle-archive-tag
- "t o"   'org-insert-todo-heading-respect-content
- "t r"   'org-clone-subtree-with-time-shift
- "t s"   'org-schedule
- "t v"   'org-show-todo-tree
- )
+
+(defhydra org-heading-hydra (org-mode-map nil :columns 4 :exit t)
+  "org headings"
+  ("h" org-promote-subtree   "promote subtree")
+  ("l" org-demote-subtree    "demote subtree")
+  ("k" org-move-subtree-up   "move subtree up")
+  ("j" org-move-subtree-down "move subtree down")
+  ("d" org-cut-subtree       "cut subtree")
+  ("y" org-copy-subtree      "copy subtree")
+  ("p" org-paste-subtree     "paste subtree")
+)
+
+(defhydra org-link-hydra (org-mode-map nil :columns 4 :exit t)
+  "org links"
+  ("o" org-open-at-point "open")
+  ("i" org-insert-link   "insert")
+  )
+
+(defhydra org-spreadsheet-column-hydra (org-mode-map nil :columns 4 :exit t)
+  "org spreadsheet column"
+  ("h" org-table-move-column-left   "move left")
+  ("l" org-table-move-column-right  "move right")
+  ("d" org-table-move-delete-column "delete")
+  ("i" org-table-move-insert-column "insert")
+  )
+
+(defhydra org-spreadsheet-row-hydra (org-mode-map nil :columns 4 :exit t)
+  "org spreadsheet row"
+  ("k" org-table-move-row-up     "move up")
+  ("j" org-table-move-row-down   "move down")
+  ("d" org-table-move-kill-row   "delete")
+  ("i" org-table-move-insert-row "insert")
+  ("h" org-table-hline-and-move  "insert hline")
+  )
+
+(defhydra org-spreadsheet-hydra (org-mode-map nil :columns 4 :exit t)
+  "org spreadsheet"
+  ("d" org-table-blank-field                "blank field")
+  ("s" org-table-sort-lines                 "sort lines")
+  ("u" org-table-iterate-buffer-tables      "update buffer tables")
+  ("v" org-table-toggle-coordinate-overlays "toggle row/column labels")
+  ("h" org-table-move-cell-left             "move cell left")
+  ("j" org-table-move-cell-down             "move cell down")
+  ("k" org-table-move-cell-up               "move cell up")
+  ("l" org-table-move-cell-right            "move cell right")
+  ("c" org-spreadsheet-column-hydra/body    "columns")
+  ("r" org-spreadsheet-row-hydra/body       "rows")
+  )
+
+(defhydra org-todo-hydra (org-mode-map nil :columns 4 :exit t)
+  "org todo"
+  ("c" org-todo "change")
+  ("d" org-deadline "deadline")
+  ("a" org-toggle-archive-tag "toggle archive")
+  ("o" org-insert-todo-heading-respect-content "insert")
+  ("r" org-clone-subtree-with-time-shift "clone with time shift")
+  ("s" org-schedule "schedule")
+  ("t" org-show-todo-tree "show todo tree")
+  )
+
+(defhydra org-hydra (org-mode-map nil :columns 4 :exit t)
+  "org"
+  ("D" org-time-stamp               "active timestamp")
+  ("d" org-time-stamp-inactive      "inactive timestamp")
+  ("S" org-sort                     "sort")
+  ("c" org-edit-special             "change")
+  ("e" org-export-dispatch          "export")
+  ("h" org-heading-hydra/body       "headings")
+  ("l" org-link-hydra/body          "links")
+  ("r" org-babel-execute-src-block  "run source block")
+  ("s" org-spreadsheet-hydra/body   "spreadsheets")
+  ("t" org-todo-hydra/body          "todo")
+)
+
+(general-define-key :states '(normal)
+                    :keymaps 'org-mode-map
+                    "SPC m" 'org-hydra/body)
+
 (general-define-key
  :keymaps 'org-read-date-minibuffer-local-map
  "h" (lambda () (interactive) (org-eval-in-calendar '(calendar-backward-day 1)))
