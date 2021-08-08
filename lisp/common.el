@@ -107,3 +107,6 @@
       (lsp-mode . lsp-enable-which-key-integration)
     :config
       (use-package lsp-ui))
+
+;; keybinding management
+(use-package general)
