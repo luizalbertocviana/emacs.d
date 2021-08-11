@@ -109,3 +109,21 @@
  "v" 'cider-inspector-def-current-val
  "H" 'cider-inspector-pop
  )
+
+; cider debugger settings (adapted from evil-collections)
+
+(add-hook 'cider-mode-hook 'evil-normalize-keymaps)
+(add-hook 'cider--debug-mode-hook 'evil-normalize-keymaps)
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(cider--debug-mode-map)
+ "n" (lambda () (interactive) (cider-debug-mode-send-reply ":next"))
+ "c" (lambda () (interactive) (cider-debug-mode-send-reply ":continue"))
+ "o" (lambda () (interactive) (cider-debug-mode-send-reply ":out"))
+ "q" (lambda () (interactive) (cider-debug-mode-send-reply ":quit"))
+ "e" (lambda () (interactive) (cider-debug-mode-send-reply ":eval"))
+ "j" (lambda () (interactive) (cider-debug-mode-send-reply ":inject"))
+ "i" (lambda () (interactive) (cider-debug-mode-send-reply ":inspect"))
+ "l" (lambda () (interactive) (cider-debug-mode-send-reply ":locals"))
+ )
