@@ -48,6 +48,9 @@
 (load "ivy-setup")
 (load "helm-setup")
 
+;; tabnine setup
+;; (load "tabnine-setup")
+
 ;; org setup
 (load "org")
 

@@ -76,9 +76,7 @@
       :config
         (use-package yasnippet-snippets)
         (yas-global-mode 1))
-    ;; tabnine
-    (use-package company-tabnine)
-    (push '(company-capf company-tabnine company-yasnippet) company-backends))
+    (push '(company-capf company-yasnippet) company-backends))
 
 ;; better company/ivy autocompletion
 (use-package prescient
