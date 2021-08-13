@@ -93,8 +93,6 @@
  "RET" 'cider-test-jump
  "d"   'cider-test-ediff
  "f"   'cider-test-rerun-failed-tests
- "j"   'cider-test-next-result
- "k"   'cider-test-previous-result
  "l"   'cider-test-run-loaded-tests
  "n"   'cider-test-run-ns-tests
  "p"   'cider-test-run-project-tests
