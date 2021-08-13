@@ -53,6 +53,7 @@
   ("i" cider-inspect "inspect")
   ("l" cider-load-file "load file")
   ("m" cider-macroexpand-1 "macroexpand")
+  ("n" cider-repl-change-ns "change repl namespace")
   ("o" cider-scratch "open scratch")
   ("r" clojure-mode-run-hydra/body "run")
   ("s" cider-apropos "search")
