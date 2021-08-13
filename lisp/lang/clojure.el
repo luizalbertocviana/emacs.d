@@ -44,7 +44,13 @@
   ("r" cider-xref-fn-refs "references")
 )
 
+(defhydra clojure-mode-browse-hydra (:columns 4 :exit t)
+  ("n" cider-browse-ns-all "namespaces")
+  ("s" cider-browse-spec-all "specs")
+)
+
 (defhydra clojure-mode-hydra (:columns 4 :exit t)
+  ("B" clojure-mode-browse-hydra/body "browse")
   ("T" cider-toggle-trace-var "toggle tracing")
   ("b" cider-load-buffer "load buffer")
   ("d" clojure-mode-doc-hydra/body "documentation")
@@ -84,8 +90,21 @@
  "TAB" 'cider-stacktrace-cycle-current-cause
  )
 
-;; TODO browser buffers
-;; TODO profiling
+(general-define-key
+ :states  '(normal)
+ :keymaps '(cider-browse-ns-mode-map)
+ "RET" 'cider-browse-ns-operate-at-point
+ "H"   'cider-browse-ns-all
+ "d"   'cider-browse-ns-doc-at-point
+ "s"   'cider-browse-ns-find-at-point
+ )
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(cider-browse-spec-mode-map)
+ "H"   'cider-browse-spec-all
+ "e"   'cider-browse-spec--print-curr-spec-example
+ )
 
 (general-define-key
  :states  '(normal)
