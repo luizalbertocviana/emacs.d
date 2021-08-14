@@ -9,12 +9,14 @@
     (cider-jack-in nil)))
 
 (defhydra clojure-mode-run-hydra (:columns 4 :exit t)
+  "clojure run"
   ("c" cider-jack-in "clojure")
   ("j" cider-jack-in-cljs "clojurescript")
   ("b" cider-jack-in-clj&cljs "both")
 )
 
 (defhydra clojure-mode-eval-hydra (:collumns 4 :exit t)
+  "clojure eval"
   ("d" cider-debug-defun-at-point "debug")
   ("e" cider-eval-defun-at-point "defun")
   ("i" cider-interrupt "interrupt")
@@ -22,6 +24,7 @@
 )
 
 (defhydra clojure-mode-doc-hydra (:collumns 4 :exit t)
+  "clojure doc"
   ("c" cider-clojuredocs "clojuredocs")
   ("d" cider-doc "clojure")
   ("j" cider-javadoc "javadoc")
@@ -29,6 +32,7 @@
 )
 
 (defhydra clojure-mode-test-hydra (:collumns 4 :exit t)
+  "clojure test"
   ("f" cider-test-rerun-failed-tests "run failed tests")
   ("l" cider-test-rerun-test "run last test")
   ("n" cider-test-run-ns-tests "run namespace tests")
@@ -38,6 +42,7 @@
 )
 
 (defhydra clojure-mode-find-hydra (:columns 4 :exit t)
+  "clojure find"
   ("d" cider-xref-fn-deps "dependencies")
   ("f" cider-find-var "definition")
   ("n" cider-find-ns "namespace")
@@ -45,11 +50,13 @@
 )
 
 (defhydra clojure-mode-browse-hydra (:columns 4 :exit t)
+  "clojure browse"
   ("n" cider-browse-ns-all "namespaces")
   ("s" cider-browse-spec-all "specs")
 )
 
 (defhydra clojure-mode-hydra (:columns 4 :exit t)
+  "clojure"
   ("B" clojure-mode-browse-hydra/body "browse")
   ("T" cider-toggle-trace-var "toggle tracing")
   ("b" cider-load-buffer "load buffer")
