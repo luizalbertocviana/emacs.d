@@ -44,6 +44,7 @@
   :prefix  "SPC"
     "TAB" '(:ignore t :which-key "last buffer")
     "SPC" '(:ignore t :which-key "more")
+    "SPC" '(:ignore t :which-key "C-c C-c")
     "P"   '(:ignore t :which-key "processes")
     "S"   '(:ignore t :which-key "spell")
     "T"   '(:ignore t :which-key "text")
@@ -66,6 +67,7 @@
   :prefix  "SPC"
     "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
     "SPC" 'tmm-menubar
+    "SPC" (general-key "C-c C-c" :state 'emacs)
     "a"   'counsel-linux-app
     "c"   'calendar
     "g"   'helm-google-suggest
