@@ -337,7 +337,7 @@
 (general-define-key
   :states  '(normal)
   :keymaps 'dashboard-mode-map
-    "p" (general-simulate-key "p" :state 'emacs)
+    "p" (general-key "p" :state 'emacs)
     "l" 'dashboard-return
 )
 ;; xref
