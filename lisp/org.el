@@ -27,12 +27,7 @@
     ;; allowed languages
     (org-babel-do-load-languages
       'org-babel-load-languages
-      '((emacs-lisp . t)
-        (shell      . t)
-        (python     . t)
-        (latex      . t)
-        (lisp       . t)
-        (C          . t)))
+      '((emacs-lisp . t)))
     ;; this makes beamer export options avaliable at the org
     ;; dispatcher
     (push 'beamer org-export-backends)
