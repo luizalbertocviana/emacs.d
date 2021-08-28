@@ -27,3 +27,9 @@ HEADER should be just the name of the header, e.g.
    "k" 'restclient-jump-prev
    "r" 'restclient-http-send-current-stay-in-window
  )
+
+(general-define-key
+ :states  '(emacs)
+ :keymaps '(restclient-mode-map)
+   "C-c C-c" 'restclient-http-send-current-stay-in-window
+)
