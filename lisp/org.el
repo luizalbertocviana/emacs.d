@@ -74,8 +74,8 @@
   "org spreadsheet column"
   ("h" org-table-move-column-left   "move left")
   ("l" org-table-move-column-right  "move right")
-  ("d" org-table-move-delete-column "delete")
-  ("i" org-table-move-insert-column "insert")
+  ("d" org-table-delete-column "delete")
+  ("i" org-table-insert-column "insert")
   )
 
 (defhydra org-spreadsheet-row-hydra (:columns 4 :exit t)
