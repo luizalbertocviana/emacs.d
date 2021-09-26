@@ -45,7 +45,7 @@
 (load "keybindings")
 
 ;; autocompletion framework setup
-(load "ivy-setup")
+;; (load "ivy-setup")
 (load "helm-setup")
 
 ;; tabnine setup
