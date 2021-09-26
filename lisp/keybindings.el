@@ -68,7 +68,7 @@
     "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
     "SPC" (general-key "C-c C-c" :state 'emacs)
     "M"   'tmm-menubar
-    "a"   'counsel-linux-app
+    "a"   'helm-run-external-command
     "c"   'calendar
     "g"   'helm-google-suggest
     "q"   'save-buffers-kill-terminal
@@ -118,7 +118,7 @@
  :prefix  "SPC b"
    "D" 'kill-some-buffers
    "B" 'buffer-menu
-   "b" 'ivy-switch-buffer
+   "b" 'helm-buffers-list
    "d" 'kill-this-buffer
    "e" 'eval-buffer
    "q" 'kill-buffer-and-frame-or-window
@@ -148,7 +148,7 @@
     "d"   '(:ignore t :which-key "dired")
     "d"   (lambda () (interactive) (dired "./"))
     "f"   'helm-find
-    "m"   'counsel-bookmark
+    "m"   'helm-bookmarks
     "o"   'helm-multi-files
     "p c" 'projectile-commander
     "p g" 'projectile-grep
@@ -157,7 +157,7 @@
     "p r" 'projectile-replace-regexp
     "p s" 'projectile-switch-project
     "p"   '(:ignore t :which-key "project")
-    "r"   'counsel-recentf
+    "r"   'helm-recentf
     "s"   'save-buffer
 )
 ;; spell checking
