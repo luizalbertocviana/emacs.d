@@ -111,3 +111,8 @@
 
 ;; keybinding management
 (use-package general)
+
+;; direnv integration
+(use-package direnv
+  :config
+    (direnv-mode))
