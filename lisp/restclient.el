@@ -18,6 +18,17 @@ HEADER should be just the name of the header, e.g.
                                       (move-end-of-line 1)
                                       (point)))))
 
+(defun web-restclient-get-body-from-response ()
+  (let* ((case-fold-search t)
+         (search-string "// ")
+         (match (string-match search-string
+                              (buffer-substring-no-properties (point-min)
+                                                              (point-max)))))
+    (goto-char match)
+    (replace-regexp-in-string "\n" ""
+                              (buffer-substring-no-properties (point-min)
+                                                              (point)))))
+
 (general-define-key
  :states  '(normal)
  :keymaps '(restclient-mode-map)
