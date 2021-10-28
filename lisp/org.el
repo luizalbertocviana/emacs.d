@@ -35,7 +35,21 @@
     ;; files)
     (setq org-capture-templates
           '(("c" "Capture" entry (file+datetree  "~/Dropbox/org/notes.org")
-              "* TODO %? %^g\n  SCHEDULED: %^{Scheduled}t DEADLINE: %^{Deadline}t"))))
+             "* TODO %? %^g\n  SCHEDULED: %^{Scheduled}t DEADLINE: %^{Deadline}t"))))
+
+;; a rest client for org mode
+(use-package verb
+  :custom
+  (verb-auto-kill-response-buffers t))
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(js-mode-map)
+ :prefix  "SPC m"
+ "r" 'verb-re-send-request
+ "s" 'verb-show-request
+ "h" 'verb-toggle-show-headers
+ )
 
 (setq org-agenda-restore-windows-after-quit t)
 
@@ -112,18 +126,26 @@
   ("t" org-show-todo-tree "show todo tree")
   )
 
+(defhydra org-rest-hydra (:columns 4 :exit t)
+  "rest"
+  ("r" verb-send-request-on-point-other-window-stay "request")
+  ("v" verb-set-var                                 "set variable")
+  ("s" verb-show-vars                               "show variables")
+)
+
 (defhydra org-hydra (:columns 4 :exit t)
   "org"
-  ("D" org-time-stamp               "active timestamp")
-  ("d" org-time-stamp-inactive      "inactive timestamp")
-  ("S" org-sort                     "sort")
-  ("c" org-edit-special             "change")
-  ("e" org-export-dispatch          "export")
-  ("h" org-heading-hydra/body       "headings")
-  ("l" org-link-hydra/body          "links")
-  ("r" org-babel-execute-src-block  "run source block")
-  ("s" org-spreadsheet-hydra/body   "spreadsheets")
-  ("t" org-todo-hydra/body          "todo")
+  ("D" org-time-stamp              "active timestamp")
+  ("R" org-babel-execute-src-block "run source block")
+  ("S" org-sort                    "sort")
+  ("c" org-edit-special            "change")
+  ("d" org-time-stamp-inactive     "inactive timestamp")
+  ("e" org-export-dispatch         "export")
+  ("h" org-heading-hydra/body      "headings")
+  ("l" org-link-hydra/body         "links")
+  ("r" org-rest-hydra/body         "rest")
+  ("s" org-spreadsheet-hydra/body  "spreadsheets")
+  ("t" org-todo-hydra/body         "todo")
 )
 
 (general-define-key :states '(normal)
