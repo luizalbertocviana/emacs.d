@@ -25,6 +25,7 @@
   ("c" cider-jack-in "clojure")
   ("j" cider-jack-in-cljs "clojurescript")
   ("b" cider-jack-in-clj&cljs "both")
+  ("p" start-cider-repl-with-profile "profile")
 )
 
 (defhydra clojure-mode-eval-hydra (:collumns 4 :exit t)
