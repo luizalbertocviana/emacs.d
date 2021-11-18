@@ -94,7 +94,7 @@
 (load "lang/csharp")
 
 ;; support for web programming
-(load "lang/web")
+;; (load "lang/web")
 
 ;; docker setup
 (load "lang/docker")
