@@ -93,6 +93,9 @@
 ;; csharp setup
 (load "lang/csharp")
 
+;; typescript setup
+(load "lang/typescript")
+
 ;; support for web programming
 ;; (load "lang/web")
 
