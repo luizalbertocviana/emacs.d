@@ -116,3 +116,6 @@
 (use-package direnv
   :config
     (direnv-mode))
+
+;; writable grep buffers
+(use-package wgrep)
