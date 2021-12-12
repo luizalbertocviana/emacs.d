@@ -240,6 +240,7 @@
   :states  '(normal visual)
   :keymaps '(override)
   :prefix  "SPC s"
+    "g" 'helm-do-grep-ag
     "s" 'isearch-forward-symbol-at-point
     "r" 'query-replace
     "R" 'replace-string
