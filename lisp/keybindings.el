@@ -150,12 +150,13 @@
     "f"   'helm-find
     "m"   'helm-bookmarks
     "o"   'helm-multi-files
+    "p R" 'projectile-replace-regexp
     "p c" 'projectile-commander
-    "p g" 'projectile-grep
-    "p o" 'projectile-find-file-dwim
+    "p g" 'helm-projectile-grep
+    "p o" 'helm-projectile-find-file-dwim
     "p p" 'helm-browse-project
-    "p r" 'projectile-replace-regexp
-    "p s" 'projectile-switch-project
+    "p r" 'helm-projectile-recentf
+    "p s" 'helm-projectile-switch-project
     "p"   '(:ignore t :which-key "project")
     "r"   'helm-recentf
     "s"   'save-buffer
