@@ -141,11 +141,14 @@
 (general-define-key
  :states  '(normal)
  :keymaps '(cider-inspector-mode-map)
- "RET" 'cider-inspector-operate-on-point
+ :prefix "SPC m"
+ "d" 'cider-inspector-def-current-val
+ "i" 'cider-inspector-operate-on-point
+ "j" 'cider-inspector-next-page
+ "k" 'cider-inspector-prev-page
+ "p" 'cider-inspector-pop
  "r" 'cider-inspector-refresh
- "v" 'cider-inspector-def-current-val
- "H" 'cider-inspector-pop
- )
+)
 
 ; cider debugger settings (adapted from evil-collections)
 
