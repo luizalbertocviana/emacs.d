@@ -20,18 +20,6 @@
   :config
     (load-theme 'doom-tomorrow-night t))
 
-;; start screen
-(use-package dashboard
-  :custom
-    (dashboard-startup-banner 'logo)
-    (dashboard-center-content t)
-    (dashboard-set-file-icons nil)
-    (dashboard-set-footer     nil)
-    (dashboard-items          '((projects . 10)))
-    (initial-buffer-choice    (lambda () (get-buffer "*dashboard*")))
-  :config
-    (dashboard-setup-startup-hook))
-
 ;; colorful delimiters (useful for editing lisp languages)
 (use-package rainbow-delimiters
   :commands (rainbow-delimiters-mode)
