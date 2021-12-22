@@ -14,6 +14,9 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+;; uses eshell as startup screen
+(setq initial-buffer-choice 'eshell)
+
 ;; disable scroll bars in every frame
 (toggle-scroll-bar -1)
 
