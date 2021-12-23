@@ -16,12 +16,20 @@
 
 (setq helm-grep-file-path-style 'relative)
 
+(add-hook 'helm-grep-mode-hook 'grep-mode)
+
 (general-define-key
   :states  '(normal)
-  :keymaps 'helm-grep-mode-map
+  :keymaps 'grep-mode-map
+  :prefix "SPC m"
+    "c" 'wgrep-change-to-wgrep-mode
+)
+
+(general-define-key
+  :states  '(normal)
+  :keymaps 'wgrep-mode-map
   :prefix "SPC m"
     "a" 'wgrep-abort-changes
-    "c" 'wgrep-change-to-wgrep-mode
     "d" 'wgrep-mark-deletion
     "f" 'wgrep-finish-edit
     "q" 'wgrep-exit
