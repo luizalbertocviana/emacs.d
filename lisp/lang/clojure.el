@@ -1,5 +1,9 @@
 (use-package cider)
 
+(use-package helm-cider
+  :config
+    (helm-cider-mode 1))
+
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode t nil)
 
 (defun start-cider-repl-with-profile ()
@@ -39,9 +43,9 @@
 (defhydra clojure-mode-doc-hydra (:collumns 4 :exit t)
   "clojure doc"
   ("c" cider-clojuredocs "clojuredocs")
-  ("d" cider-doc "clojure")
+  ("d" cider-apropos-documentation "clojure")
   ("j" cider-javadoc "javadoc")
-  ("s" cider-apropos-documentation "search")
+  ("s" cider-apropos "search")
 )
 
 (defhydra clojure-mode-test-hydra (:collumns 4 :exit t)
