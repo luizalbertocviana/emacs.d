@@ -43,9 +43,8 @@
 (defhydra clojure-mode-doc-hydra (:collumns 4 :exit t)
   "clojure doc"
   ("c" cider-clojuredocs "clojuredocs")
-  ("d" cider-apropos-documentation "clojure")
-  ("j" cider-javadoc "javadoc")
-  ("s" cider-apropos "search")
+  ("d" cider-doc "documentation")
+  ("a" cider-apropos "apropos")
 )
 
 (defhydra clojure-mode-test-hydra (:collumns 4 :exit t)
