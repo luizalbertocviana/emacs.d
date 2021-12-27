@@ -8,6 +8,11 @@
 
 (use-package helm-projectile)
 
+(use-package helm-company
+  :after company
+  :custom
+    (helm-company-candidate-number-limit nil))
+
 (setq helm-grep-ag-command (concat "rg"
                                    " --color=never"
                                    " --smart-case"

@@ -416,10 +416,11 @@
     "s"  'doc-view-search
 )
 ;; company completion popup.  I am using Meta because Control is
-;; already bounded
+;; already bound
 (general-define-key
   :states  '(insert)
   :keymaps '(company-active-map override)
+    "M-h" 'helm-company
     "M-j" 'company-select-next
     "M-k" 'company-select-previous
     "M-l" 'company-complete
