@@ -24,12 +24,15 @@
 ;; cider integration with lsp
 (add-hook 'cider-mode-hook 'cider-lsp-integration)
 
-(defhydra clojure-mode-run-hydra (:columns 4 :exit t)
-  "clojure run"
-  ("c" cider-jack-in "clojure")
-  ("j" cider-jack-in-cljs "clojurescript")
-  ("b" cider-jack-in-clj&cljs "both")
-  ("p" start-cider-repl-with-profile "profile")
+(defhydra clojure-mode-repl-hydra (:columns 4 :exit t)
+  "clojure repl"
+  ("c" cider-jack-in "start clojure repl")
+  ("C" cider-connect "connect to clojure repl")
+  ("j" cider-jack-in-cljs "start clojurescript repl")
+  ("J" cider-connect-cljs "connect to clojurescript repl")
+  ("b" cider-jack-in-clj&cljs "start both repls")
+  ("B" cider-connect-clj&cljs "connect to both repls")
+  ("p" start-cider-repl-with-profile "clojure repl with profile")
 )
 
 (defhydra clojure-mode-eval-hydra (:collumns 4 :exit t)
@@ -84,7 +87,7 @@
   ("m" cider-macroexpand-1 "macroexpand")
   ("n" cider-repl-set-ns "change repl namespace")
   ("o" cider-scratch "open scratch")
-  ("r" clojure-mode-run-hydra/body "run")
+  ("r" clojure-mode-repl-hydra/body "repl")
   ("s" cider-apropos "search")
   ("t" clojure-mode-test-hydra/body "test")
   ("u" cider-undef "undef")
