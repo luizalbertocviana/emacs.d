@@ -101,9 +101,10 @@
 (use-package general)
 
 ;; direnv integration
-(use-package direnv
-  :config
-    (direnv-mode))
+(when (executable-find "direnv")
+  (use-package direnv
+    :config
+    (direnv-mode)))
 
 ;; writable grep buffers
 (use-package wgrep)
