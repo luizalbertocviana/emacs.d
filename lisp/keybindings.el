@@ -293,10 +293,11 @@
     "e"   'next-error
     "f"   'mark-defun
     "l"   '(:ignore t :which-key "lsp")
+    "l D" 'helm-lsp-diagnostics
     "l R" 'lsp-workspace-restart
     "l S" 'helm-lsp-global-workspace-symbol
     "l a" 'helm-lsp-code-actions
-    "l d" 'helm-lsp-diagnostics
+    "l d" 'lsp-describe-thing-at-point
     "l f" 'lsp-format-buffer
     "l i" 'lsp-organize-imports
     "l q" 'lsp-workspace-shutdown
