@@ -58,6 +58,14 @@
             (define-key evil-normal-state-local-map
               (kbd "TAB") 'org-cycle)))
 
+;; naming org prefix
+(general-define-key
+  :states  '(normal)
+  :keymaps '(override)
+  :prefix  "SPC"
+    "o" '(:ignore t :which-key "org")
+)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(override)

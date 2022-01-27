@@ -53,7 +53,6 @@
     "h"   '(:ignore t :which-key "help")
     "i"   '(:ignore t :which-key "imenu")
     "m"   '(:ignore t :which-key "mode")
-    "o"   '(:ignore t :which-key "org")
     "p"   '(:ignore t :which-key "program")
     "s"   '(:ignore t :which-key "search")
     "t"   '(:ignore t :which-key "terminal")
