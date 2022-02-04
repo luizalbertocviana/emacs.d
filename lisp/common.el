@@ -108,3 +108,8 @@
 
 ;; writable grep buffers
 (use-package wgrep)
+
+;; sync PATH from shell with emacs exec-path
+(use-package exec-path-from-shell
+  :config
+    (exec-path-from-shell-initialize))
