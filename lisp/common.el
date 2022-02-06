@@ -92,6 +92,8 @@
 (use-package lsp-mode
     :custom
       (lsp-restart 'auto-restart)
+      (lsp-ui-doc-show-with-cursor t)
+      (lsp-ui-sideline-show-code-actions t)
     :hook
       (lsp-mode . lsp-enable-which-key-integration)
     :config
