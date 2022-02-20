@@ -100,7 +100,8 @@
 ;; (load "lang/web")
 
 ;; docker setup
-(load "lang/docker")
+(when (executable-find "docker")
+  (load "lang/docker"))
 
 ;; sql setup
 (load "lang/sql")
