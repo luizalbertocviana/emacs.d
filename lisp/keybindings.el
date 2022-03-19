@@ -35,6 +35,14 @@
 (add-hook 'eshell-mode-hook 'clear-repl-hook)
 (add-hook 'comint-mode-hook 'clear-repl-hook)
 
+;; for some reason dead grave is unbound when running emacs from a
+;; distrobox arch container. Due to that, I am rebinding it
+(global-set-key (kbd "<dead-grave>")
+                (lambda ()
+                  (interactive)
+                  (insert-char (char-from-name "GRAVE ACCENT"))))
+
+
 ;; general keybindings
 
 ;; naming some prefixes
