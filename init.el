@@ -52,7 +52,7 @@
 ;; (load "tabnine-setup")
 
 ;; org setup
-;; (load "org-setup")
+(load "org-setup")
 
 ;; vterm (a better terminal emulator for emacs)
 ;; (load "vterm")
