@@ -60,18 +60,12 @@
  "q" 'kill-buffer-and-window
  )
 (general-define-key
- :states '(normal)
+ :states  '(normal)
  :keymaps '(sly-db-mode-map)
- "J" 'sly-db-details-down
- "K" 'sly-db-details-up
  "a" 'sly-db-abort
  "c" 'sly-db-continue
- "d" 'sly-db-pprint-eval-in-frame
- "e" 'sly-db-eval-in-frame
- "i" 'sly-db-inspect-in-frame
+ "p" 'sly-db-pprint-eval-in-frame
  "q" 'sly-db-quit
- "t" 'sly-db-toggle-details
- "v" 'sly-db-show-frame-source
  )
 (general-define-key
  :states '(normal)
@@ -81,4 +75,5 @@
  "c" 'sly-db-recompile-frame-source
  "d" 'sly-db-disassemble
  "r" 'sly-db-restart-frame
+ "s" 'sly-db-show-frame-source
  )
