@@ -41,6 +41,7 @@
   ("e" cider-eval-defun-at-point "defun")
   ("i" cider-interrupt "interrupt")
   ("p" cider-pprint-eval-defun-at-point "pretty print")
+  ("s" cider-eval-last-sexp "sexp")
 )
 
 (defhydra clojure-mode-doc-hydra (:collumns 4 :exit t)
