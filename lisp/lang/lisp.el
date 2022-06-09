@@ -15,104 +15,102 @@
 
 (defhydra lisp-mode-eval-hydra (:columns 4 :exit t)
   "lisp eval"
-  ("e" sly-eval-last-expression "last expression")
+  ("e" eval-last-expression-inplace "last expression")
   ("f" sly-eval-defun "defun")
   ("i" sly-interactive-eval "interactively")
-  ("r" sly-eval-region "region")
   ("p" sly-pprint-eval-last-expression "pretty print")
-  ("v" sly-edit-value "edit value")
   ("u" sly-undefine-function "undefine function")
+  ("v" sly-edit-value "edit value")
 )
 
 (defhydra lisp-mode-compile-hydra (:columns 4 :exit t)
   "lisp compile"
+  ("c" sly-compile-file "file")
   ("f" sly-compile-defun "defun")
   ("l" sly-compile-and-load-file "compile and load file")
-  ("c" sly-compile-file "file")
-  ("r" sly-compile-region "region")
 )
 
 (defhydra lisp-mode-expand-hydra (:columns 4 :exit t)
   "lisp expand"
-  ("e" sly-expand-1 "dwim")
-  ("m" sly-macroexpand-1 "macro")
+  ("C" sly-compiler-macroexpand "compiler macro fully")
   ("M" sly-macroexpand-all "macro fully")
   ("c" sly-compiler-macroexpand-1 "compiler macro")
-  ("C" sly-compiler-macroexpand "compiler macro fully")
+  ("e" sly-expand-1 "dwim")
+  ("m" sly-macroexpand-1 "macro")
   ("s" sly-format-string-expand "format string")
 )
 
 (defhydra lisp-mode-find-hydra (:columns 4 :exit t)
   "lisp find"
-  ("d" sly-edit-definition "definition")
-  ("b" sly-pop-find-definition-stack "go back")
-  ("r" sly-edit-uses "references")
-  ("c" sly-who-calls "callers")
+  ("B" sly-who-binds "global variable bindings")
   ("C" sly-calls-who "callees")
   ("R" sly-who-references "global variable references")
-  ("B" sly-who-binds "global variable bindings")
   ("a" sly-who-sets "global variable assignments")
+  ("b" sly-pop-find-definition-stack "go back")
+  ("c" sly-who-calls "callers")
+  ("d" sly-edit-definition "definition")
   ("m" sly-who-macroexpands "macro usages")
+  ("r" sly-edit-uses "references")
   ("s" sly-who-specializes "class specializations")
 )
 
 (defhydra lisp-mode-documentation-hydra (:columns 4 :exit t)
   "lisp documentation"
-  ("m" sly-info "sly manual")
-  ("s" sly-describe-symbol "symbol")
-  ("f" sly-describe-function "function")
-  ("a" sly-apropos "apropos")
   ("A" sly-apropos-all "apropos all")
-  ("p" sly-apropos-package "apropos package")
-  ("h" sly-hyperspec-lookup "hyperspec")
   ("F" hyperspec-lookup-format "hyperspec format character")
+  ("a" sly-apropos "apropos")
+  ("f" sly-describe-function "function")
+  ("h" sly-hyperspec-lookup "hyperspec")
+  ("m" sly-info "sly manual")
+  ("p" sly-apropos-package "apropos package")
   ("r" hyperspec-lookup-reader-macro "hyperspec reader macro")
+  ("s" sly-describe-symbol "symbol")
 )
 
 (defhydra lisp-mode-connections-hydra (:columns 4 :exit t)
   "lisp connections"
+  ("D" sly-disconnect-all "disconnect all connections")
   ("a" sly-abort-connection "abort current attempt")
+  ("c" sly-connect "connect")
+  ("d" sly-disconnect "disconnect from current connection")
   ("l" sly-list-connections "list")
   ("n" sly-next-connection "next")
   ("p" sly-prev-connection "previous")
-  ("c" sly-connect "connect")
-  ("d" sly-disconnect "disconnect from current connection")
-  ("D" sly-disconnect-all "disconnect all connections")
   ("t" sly-list-threads "list threads")
 )
 
 (defhydra lisp-mode-tracing-hydra (:columns 4 :exit t)
   "lisp tracing"
+  ("T" sly-trace-dialog "trace dialog")
   ("t" sly-toggle-trace-fdefinition "toggle")
   ("u" sly-untrace-all "untrace all")
-  ("T" sly-trace-dialog "trace dialog")
 )
 
 (defhydra lisp-mode-process-hydra (:columns 4 :exit t)
   "lisp process"
+  ("c" sly-cd "change directory")
+  ("d" sly-pwd "current directory")
   ("i" sly-interrupt "interrupt")
   ("r" sly-restart-inferior-lisp "restart")
   ("s" sly-mrepl-sync "sync")
-  ("c" sly-cd "change directory")
-  ("d" sly-pwd "current directory")
 )
 
 (defhydra lisp-mode-repl-hydra (:columns 4 :exit t)
   "lisp repl"
-  ("s" sly "start")
   ("S" sly-mrepl "select")
   ("n" sly-mrepl-new "new")
   ("r" sly-mrepl-sync "sync")
+  ("s" sly "start")
 )
 
 (defhydra lisp-mode-hydra (:columns 4 :exit t)
   "lisp mode"
-  ("e" lisp-mode-eval-hydra/body "eval")
+  ("C" lisp-mode-connections-hydra/body "connections")
+  ("D" sly-disassemble-symbol "disassemble")
   ("E" lisp-mode-expand-hydra/body "expand")
   ("c" lisp-mode-compile-hydra/body "compile")
-  ("C" lisp-mode-connections-hydra/body "connections")
   ("d" lisp-mode-documentation-hydra/body "documentation")
-  ("D" sly-disassemble-symbol "disassemble")
+  ("e" lisp-mode-eval-hydra/body "eval")
   ("f" lisp-mode-find-hydra/body "find")
   ("i" sly-inspect "inspect")
   ("l" sly-load-file "load file")
@@ -130,6 +128,7 @@
 (general-define-key
    :states '(normal)
    :keymaps 'sly-trace-dialog-mode-map
+   :prefix "SPC m"
    "t" 'sly-trace-dialog-toggle-trace
    "r" 'sly-trace-dialog-fetch-status
    "R" 'sly-trace-dialog-fetch-traces
@@ -138,6 +137,7 @@
 (general-define-key
  :states '(normal)
  :keymaps '(sly-macroexpansion-minor-mode-map)
+ :prefix "SPC m"
  "e" 'sly-macroexpand-1-inplace
  "q" 'sly-temp-buffer-quit
  "u" 'sly-macroexpand-undo)
@@ -152,7 +152,7 @@
 (general-define-key
  :states '(normal)
  :keymaps '(sly-connection-list-mode-map)
- "RET" 'sly-goto-connection
+ :prefix "SPC m"
  "d" 'sly-connection-list-make-default
  "q" 'sly-temp-buffer-quit
  "r" 'sly-update-connection-list
@@ -168,9 +168,20 @@
  "s" 'isearch-backward)
 
 (general-define-key
+ :states '(insert)
+ :keymaps '(sly-mrepl-mode-map)
+ "RET" 'sly-mrepl-return
+ "TAB" 'sly-mrepl-indent-and-complete-symbol)
+
+(general-define-key
  :states '(normal)
  :keymaps '(sly-inspector-mode-map)
- "RET" 'sly-inspector-operate-on-point
+ "RET" 'sly-inspector-operate-on-point)
+
+(general-define-key
+ :states '(normal)
+ :keymaps '(sly-inspector-mode-map)
+ :prefix "SPC m"
  "d" 'sly-inspector-describe-inspectee
  "e" 'sly-inspector-eval
  "v" 'sly-inspector-toggle-verbose
