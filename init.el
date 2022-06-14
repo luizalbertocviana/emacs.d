@@ -77,8 +77,8 @@
 (load "lang/cmake")
 
 ;; python setup
-;; (load "lang/python-lsp")
-(load "lang/python-elpy")
+(load "lang/python-lsp")
+;; (load "lang/python-elpy")
 
 ;; hy setup
 ;; (load "lang/hy")
