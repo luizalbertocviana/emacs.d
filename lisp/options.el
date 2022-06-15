@@ -80,3 +80,6 @@
 
 ;; gdb setup
 (setq gdb-display-io-nopopup t)
+
+;; makes lsp-mode use flycheck
+(setq lsp-prefer-flymake nil)
