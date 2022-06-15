@@ -15,6 +15,10 @@
 ;; spell checking
 (use-package flyspell :defer t)
 
+;; Enable nice rendering of diagnostics like compile errors.
+(use-package flycheck
+  :commands (flycheck-mode))
+
 ;; colorscheme setup
 (use-package doom-themes
   :config
@@ -98,6 +102,14 @@
       (lsp-mode . lsp-enable-which-key-integration)
     :config
       (use-package lsp-ui))
+
+(use-package dap-mode
+  :hook
+    (lsp-mode . dap-mode)
+    (lsp-mode . dap-ui-mode)
+)
+
+(use-package posframe)
 
 ;; keybinding management
 (use-package general)
