@@ -23,3 +23,14 @@
 
 ;; Add metals backend for lsp-mode
 (use-package lsp-metals)
+
+(general-define-key
+ :states '(normal)
+ :keymaps '(scala-mode-map)
+ :prefix "SPC m"
+   "c" 'sbt-command
+   "h" 'sbt-hydra
+   "s" 'sbt-start
+   "r" 'run-scala
+   "R" 'sbt-run-previous-command
+)
