@@ -112,6 +112,9 @@
 ;; scala setup
 (load "lang/scala")
 
+;; nix language setup
+(load "lang/nix")
+
 ;; after initialization, revert startup preparations
 (setq gc-cons-threshold 16777216
       gc-cons-percentage 0.1
