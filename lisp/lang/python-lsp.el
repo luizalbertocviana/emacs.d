@@ -2,6 +2,8 @@
 
 (use-package lsp-python-ms)
 
+(setq lsp-python-ms-executable (executable-find "python-language-server"))
+
 (add-hook 'python-mode-hook 'lsp)
 
 (general-define-key
