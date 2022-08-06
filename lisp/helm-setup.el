@@ -51,3 +51,10 @@
 (define-key helm-map (kbd "C-k") 'helm-previous-line)
 (define-key helm-map (kbd "C-l") 'helm-maybe-exit-minibuffer)
 (define-key helm-map (kbd "C-m") 'helm-toggle-visible-mark)
+
+;; makes helm buffer always appear at the bottom bottom
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*helm" (* not-newline) "*" eos)
+               (display-buffer-in-side-window)
+               (inhibit-same-window . t)
+               (window-height . 0.4)))
