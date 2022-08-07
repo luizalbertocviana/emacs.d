@@ -6,11 +6,7 @@
 
 (use-package helm-lsp)
 
-(use-package helm-projectile
-  :straight (helm-projectile :type   git
-                             :flavor melpa
-                             :host   github
-                             :repo   "luizalbertocviana/helm-projectile"))
+(use-package helm-projectile)
 
 (use-package helm-company
   :after company
