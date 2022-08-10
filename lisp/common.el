@@ -52,37 +52,11 @@
 ;; hydra setup
 (use-package hydra)
 
-;; autocompletion
-(use-package company
-  :hook
-    (after-init . global-company-mode)
-  :custom
-    (company-idle-delay 0)
+;; yasnippet
+(use-package yasnippet
   :config
-    ;; displays a help popup window
-    (use-package company-quickhelp
-      :config
-        (company-quickhelp-mode))
-    ;; yasnippet
-    (use-package yasnippet
-      :config
-        (use-package yasnippet-snippets)
-        (yas-global-mode 1))
-    (push '(company-capf company-yasnippet) company-backends))
-
-;; better company/ivy autocompletion
-(use-package prescient
-  :config
-    ;; ivy integration
-    (use-package ivy-prescient
-      :config
-        (ivy-prescient-mode))
-    ;; company integration
-    (use-package company-prescient
-      :config
-      (company-prescient-mode))
-    ;; remember autocompletion choices made in previous emacs sessions
-    (prescient-persist-mode))
+  (use-package yasnippet-snippets)
+  (yas-global-mode 1))
 
 ;; for some reason it is not being automatically loaded anymore. This
 ;; loads it manually as it is required by magit
@@ -98,6 +72,7 @@
       (lsp-restart 'auto-restart)
       (lsp-ui-doc-show-with-cursor t)
       (lsp-ui-sideline-show-code-actions t)
+      (lsp-prefer-flymake nil)
     :hook
       (lsp-mode . lsp-enable-which-key-integration)
     :config
@@ -108,8 +83,6 @@
     (lsp-mode . dap-mode)
     (lsp-mode . dap-ui-mode)
 )
-
-(use-package posframe)
 
 ;; keybinding management
 (use-package general)

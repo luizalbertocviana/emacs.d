@@ -1,5 +1,8 @@
 (add-hook 'c++-mode-hook 'lsp t nil)
 
+;; gdb setup
+(setq gdb-display-io-nopopup t)
+
 (general-define-key
  :states  '(normal)
  :keymaps '(c++-mode-map)

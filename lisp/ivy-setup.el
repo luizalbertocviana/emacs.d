@@ -18,6 +18,11 @@
         (ivy-rich-mode)
         (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)))
 
+;; ivy integration
+(use-package ivy-prescient
+  :config
+  (ivy-prescient-mode))
+
 ;; ivy minibuffer
 (general-define-key
   :keymaps '(ivy-minibuffer-map ivy-switch-buffer-map)

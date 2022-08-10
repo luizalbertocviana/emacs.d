@@ -105,28 +105,28 @@
     "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
     "SPC" (general-key "C-c C-c" :state 'emacs)
     "M"   'tmm-menubar
-    "a"   'helm-run-external-command
+    "a"   'remapme-run-external-command
     "c"   'calendar
-    "g"   'helm-google-suggest
+    "g"   'remapme-google-suggest
     "q"   'save-buffers-kill-terminal
     "r"   'async-shell-command
-    "x"   'helm-M-x
+    "x"   'remapme-m-x
 )
 ;; imenu menu
 (general-define-key
   :states  '(normal)
   :keymaps '(override)
   :prefix  "SPC i"
-    "I" 'helm-imenu-in-all-buffers
-    "i" 'helm-imenu
+    "I" 'remapme-imenu-in-all-buffers
+    "i" 'imenu
 )
 ;; processes menu
 (general-define-key
   :states  '(normal)
   :keymaps '(override)
   :prefix  "SPC P"
-    "p" 'helm-list-emacs-process
-    "t" 'helm-top
+    "p" 'list-processes
+    "t" 'remapme-top
 )
 ;; terminal menu
 (general-define-key
@@ -140,8 +140,8 @@
   :states '(normal)
   :leymaps '(override)
   :prefix "SPC h"
-    "M" 'helm-man-woman
-    "a" 'helm-apropos
+    "M" 'woman
+    "a" 'apropos
     "f" 'describe-function
     "h" 'help-for-help
     "k" 'describe-key
@@ -155,7 +155,7 @@
  :prefix  "SPC b"
    "D" 'kill-some-buffers
    "B" 'buffer-menu
-   "b" 'helm-buffers-list
+   "b" 'switch-to-buffer
    "d" 'kill-this-buffer
    "e" 'eval-buffer
    "q" 'kill-buffer-and-frame-or-window
@@ -180,22 +180,22 @@
   :prefix  "SPC f"
     "D"   'diff-buffer-with-file
     "R"   'recover-this-file
-    "S"   'helm-occur
+    "S"   'occur
     "U"   'revert-buffer
     "d"   '(:ignore t :which-key "dired")
     "d"   (lambda () (interactive) (dired "./"))
-    "f"   'helm-find
-    "m"   'helm-bookmarks
-    "o"   'helm-multi-files
+    "f"   'remapme-find
+    "m"   'list-bookmarks
+    "o"   'find-file
     "p R" 'projectile-replace-regexp
     "p c" 'projectile-commander
-    "p g" 'helm-projectile-grep
-    "p o" 'helm-projectile-find-file-dwim
-    "p p" 'helm-browse-project
-    "p r" 'helm-projectile-recentf
-    "p s" 'helm-projectile-switch-project
+    "p g" 'projectile-grep
+    "p o" 'projectile-find-file-dwim
+    "p p" 'remapme-browse-project
+    "p r" 'projectile-recentf
+    "p s" 'projectile-switch-project
     "p"   '(:ignore t :which-key "project")
-    "r"   'helm-recentf
+    "r"   'recentf-open-files
     "s"   'save-buffer
 )
 ;; spell checking
@@ -278,7 +278,7 @@
   :states  '(normal visual)
   :keymaps '(override)
   :prefix  "SPC s"
-    "g" 'helm-do-grep-ag
+    "g" 'grep
     "s" 'isearch-forward-symbol-at-point
     "r" 'query-replace
     "R" 'replace-string
@@ -294,7 +294,7 @@
   :keymaps '(override)
   :prefix  "SPC T"
     "A"     'align-regexp
-    "R"     'helm-regexp
+    "R"     'remapme-regexp
     "S"     'sort-fields
     "a"     'align
     "c"     'capitalize-dwim
@@ -332,14 +332,14 @@
     "l"   '(:ignore t :which-key "lsp")
     "l D" 'helm-lsp-diagnostics
     "l R" 'lsp-workspace-restart
-    "l S" 'helm-lsp-global-workspace-symbol
-    "l a" 'helm-lsp-code-actions
+    "l S" 'remapme-lsp-global-workspace-symbol
+    "l a" 'lsp-execute-code-action
     "l d" 'lsp-describe-thing-at-point
     "l f" 'lsp-format-buffer
     "l i" 'lsp-organize-imports
     "l q" 'lsp-workspace-shutdown
     "l r" 'lsp-rename
-    "l s" 'helm-lsp-workspace-symbol
+    "l s" 'remapme-lsp-workspace-symbol
     "p"   'check-parens
     "r"   'recompile
     ;; these only work in prog mode (or if you enable hs-minor-mode)
@@ -372,13 +372,6 @@
   :keymaps '(override)
     "M-l" 'forward-sentence
     "M-h" 'backward-sentence
-)
-;; dashboard
-(general-define-key
-  :states  '(normal)
-  :keymaps 'dashboard-mode-map
-    "p" (general-key "p" :state 'emacs)
-    "l" 'dashboard-return
 )
 ;; xref
 (general-define-key
@@ -452,16 +445,6 @@
     "j"  'doc-view-next-line-or-next-page
     "k"  'doc-view-previous-line-or-previous-page
     "s"  'doc-view-search
-)
-;; company completion popup.  I am using Meta because Control is
-;; already bound
-(general-define-key
-  :states  '(insert)
-  :keymaps '(company-active-map override)
-    "M-h" 'helm-company
-    "M-j" 'company-select-next
-    "M-k" 'company-select-previous
-    "M-l" 'company-complete
 )
 ;; magit mode
 (general-define-key

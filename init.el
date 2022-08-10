@@ -28,6 +28,9 @@
 ;; commonly used packages
 (load "common")
 
+;; autocompletion
+(load "company-setup")
+
 ;; dired setup
 (load "dired-setup")
 
@@ -40,6 +43,9 @@
 
 ;; evil setup
 (load "evil-setup")
+
+;; functions for remapping
+(load "remapme-functions")
 
 ;; keybindings setup
 (load "keybindings")

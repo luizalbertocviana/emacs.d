@@ -4,6 +4,10 @@
   :custom
     (inferior-lisp-program "ros run"))
 
+(defun lisp-correct-closing-quote ()
+  (sp-pair "'" nil :actions :rem)
+  (sp-pair "`" nil :actions :rem))
+
 (add-hook 'lisp-mode-hook 'lisp-correct-closing-quote t t)
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode t nil)
 

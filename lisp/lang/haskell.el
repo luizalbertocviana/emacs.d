@@ -6,7 +6,17 @@
 
 (add-hook 'haskell-mode-hook 'lsp t nil)
 
-(add-hook 'haskell-interactive-mode-hook 'clear-repl-hook)
+(defun haskell-clear-repl ()
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (haskell-interactive-mode-return)))
+
+(defun haskell-clear-repl-hook ()
+  (evil-local-set-key 'normal (kbd "C-c C-l") 'haskell-clear-repl)
+  (evil-local-set-key 'insert (kbd "C-c C-l") 'haskell-clear-repl))
+
+(add-hook 'haskell-interactive-mode-hook 'haskell-clear-repl-hook)
 
 (general-define-key
  :states  '(normal)
