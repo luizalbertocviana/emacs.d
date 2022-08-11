@@ -14,18 +14,6 @@
     (set-variable 'cider-lein-parameters lein-params)
     (cider-jack-in nil)))
 
-;; adds lsp support for clojure
-(add-hook 'clojure-mode-hook 'lsp)
-(add-hook 'clojurec-mode-hook 'lsp)
-(add-hook 'clojurescript-mode-hook 'lsp)
-
-(defun cider-lsp-integration ()
-  (setq-local lsp-enable-indentation nil)
-  (setq-local lsp-enable-completion-at-point nil))
-
-;; cider integration with lsp
-(add-hook 'cider-mode-hook 'cider-lsp-integration)
-
 (defhydra clojure-mode-repl-hydra (:columns 4 :exit t)
   "clojure repl"
   ("c" cider-jack-in "start clojure repl")
