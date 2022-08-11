@@ -47,7 +47,7 @@
     "U" 'wgrep-remove-all-change
 )
 
-(define-key global-map [remap remapme-run-external-command] 'helm-run-external-command)
+(define-key global-map [remap shell-command] 'helm-run-external-command)
 (define-key global-map [remap remapme-google-suggest] 'helm-google-suggest)
 (define-key global-map [remap remapme-m-x] 'helm-M-x)
 (define-key global-map [remap remapme-imenu-in-all-buffers] 'helm-imenu-in-all-buffers)

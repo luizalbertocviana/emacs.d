@@ -104,8 +104,9 @@
   :prefix  "SPC"
     "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer)))
     "SPC" (general-key "C-c C-c" :state 'emacs)
+    "A"   'embark-act
     "M"   'tmm-menubar
-    "a"   'remapme-run-external-command
+    "a"   'shell-command
     "c"   'calendar
     "g"   'remapme-google-suggest
     "q"   'save-buffers-kill-terminal

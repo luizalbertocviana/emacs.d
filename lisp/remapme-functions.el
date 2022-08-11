@@ -1,7 +1,3 @@
-(defun remapme-run-external-command ()
-  (interactive)
-  (message "I am a dummy function. My sole purpose is to be remapped"))
-
 (defun remapme-google-suggest ()
   (interactive)
   (message "I am a dummy function. My sole purpose is to be remapped"))

@@ -29,7 +29,8 @@
 (load "common")
 
 ;; autocompletion
-(load "company-setup")
+;; (load "company-setup")
+(load "corfu-setup")
 
 ;; dired setup
 (load "dired-setup")
@@ -52,7 +53,10 @@
 
 ;; autocompletion framework setup
 ;; (load "ivy-setup")
-(load "helm-setup")
+;; (load "helm-setup")
+(load "vertico-setup")
+
+(load "consult-setup")
 
 ;; tabnine setup
 ;; (load "tabnine-setup")
