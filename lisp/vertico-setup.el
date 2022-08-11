@@ -46,3 +46,5 @@
 (setq enable-recursive-minibuffers t)
 
 (define-key vertico-map (kbd "C-a") #'embark-act)
+(define-key vertico-map (kbd "C-j") #'vertico-next)
+(define-key vertico-map (kbd "C-k") #'vertico-previous)
