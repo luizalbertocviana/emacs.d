@@ -2,10 +2,6 @@
   (interactive)
   (message "I am a dummy function. My sole purpose is to be remapped"))
 
-(defun remapme-m-x ()
-  (interactive)
-  (message "I am a dummy function. My sole purpose is to be remapped"))
-
 (defun remapme-imenu-in-all-buffers ()
   (interactive)
   (message "I am a dummy function. My sole purpose is to be remapped"))

@@ -111,7 +111,7 @@
     "g"   'remapme-google-suggest
     "q"   'save-buffers-kill-terminal
     "r"   'async-shell-command
-    "x"   'remapme-m-x
+    "x"   'execute-extended-command
 )
 ;; imenu menu
 (general-define-key
