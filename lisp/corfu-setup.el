@@ -68,3 +68,14 @@
   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+
+(define-key corfu-map [remap forward-char] #'corfu-insert)
+(define-key corfu-map [remap backward-char] #'corfu-quit)
+
+(defun corfu-move-to-minibuffer ()
+  (interactive)
+  (let ((completion-extra-properties corfu--extra)
+        completion-cycle-threshold completion-cycling)
+    (apply #'consult-completion-in-region completion-in-region--data)))
+
+(define-key corfu-map (kbd "C-m") #'corfu-move-to-minibuffer)
