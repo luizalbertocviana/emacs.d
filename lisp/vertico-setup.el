@@ -48,3 +48,5 @@
 (define-key vertico-map (kbd "C-a") #'embark-act)
 (define-key vertico-map (kbd "C-j") #'vertico-next)
 (define-key vertico-map (kbd "C-k") #'vertico-previous)
+(define-key vertico-map (kbd "C-l") #'vertico-exit)
+(define-key vertico-map (kbd "C-h") #'keyboard-escape-quit)
