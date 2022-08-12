@@ -77,3 +77,6 @@
 
 ;; makes docview scrolling change document pages
 (setq doc-view-continuous t)
+
+(require 'warnings)
+(add-to-list 'warning-suppress-types '(defvaralias losing-value woman-topic-history))
