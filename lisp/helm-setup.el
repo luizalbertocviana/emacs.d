@@ -29,13 +29,6 @@
 
 (general-define-key
   :states  '(normal)
-  :keymaps 'grep-mode-map
-  :prefix "SPC m"
-    "c" 'wgrep-change-to-wgrep-mode
-)
-
-(general-define-key
-  :states  '(normal)
   :keymaps 'wgrep-mode-map
   :prefix "SPC m"
     "a" 'wgrep-abort-changes
