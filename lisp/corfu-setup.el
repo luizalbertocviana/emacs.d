@@ -78,4 +78,4 @@
         completion-cycle-threshold completion-cycling)
     (apply #'consult-completion-in-region completion-in-region--data)))
 
-(define-key corfu-map (kbd "C-m") #'corfu-move-to-minibuffer)
+(define-key corfu-map (kbd "M-m") #'corfu-move-to-minibuffer)
