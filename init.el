@@ -71,7 +71,7 @@
 ;; (load "gnus-setup")
 
 ;; LaTeX setup
-(load "lang/latex-auctex")
+;; (load "lang/latex-auctex")
 ;; (load "lang/latex-auctex-lsp")
 
 ;; cpp setup
@@ -104,7 +104,7 @@
 (load "lang/csharp")
 
 ;; typescript setup
-(load "lang/typescript")
+;; (load "lang/typescript")
 
 ;; support for web programming
 ;; (load "lang/web")
