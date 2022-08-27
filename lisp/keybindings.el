@@ -185,6 +185,7 @@
     "d"   '(:ignore t :which-key "dired")
     "d"   (lambda () (interactive) (dired "./"))
     "f"   'remapme-find
+    "l"   'position-to-kill-ring
     "m"   'list-bookmarks
     "o"   'find-file
     "p R" 'projectile-replace-regexp
