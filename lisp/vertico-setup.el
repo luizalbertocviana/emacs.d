@@ -50,3 +50,4 @@
 (define-key vertico-map (kbd "C-k") #'vertico-previous)
 (define-key vertico-map (kbd "C-l") #'vertico-exit)
 (define-key vertico-map (kbd "C-h") #'keyboard-escape-quit)
+(define-key vertico-map (kbd "RET") #'vertico-exit-input)
