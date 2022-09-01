@@ -11,9 +11,9 @@
     (cider-jack-in nil)))
 
 ;; adds lsp support for clojure
-(add-hook 'clojure-mode-hook 'lsp)
-(add-hook 'clojurec-mode-hook 'lsp)
-(add-hook 'clojurescript-mode-hook 'lsp)
+;; (add-hook 'clojure-mode-hook 'lsp)
+;; (add-hook 'clojurec-mode-hook 'lsp)
+;; (add-hook 'clojurescript-mode-hook 'lsp)
 
 (defun cider-lsp-integration ()
   (setq-local lsp-enable-indentation nil)
