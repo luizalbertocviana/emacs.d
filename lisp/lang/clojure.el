@@ -1,9 +1,5 @@
 (use-package cider)
 
-(use-package helm-cider
-  :config
-    (helm-cider-mode 1))
-
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode t nil)
 
 (defun start-cider-repl-with-profile ()
