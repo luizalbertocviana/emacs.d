@@ -36,7 +36,7 @@
 (defhydra clojure-mode-eval-hydra (:collumns 4 :exit t)
   "clojure eval"
   ("d" cider-debug-defun-at-point "debug")
-  ("e" cider-eval-defun-at-point "defun")
+  ("e" cider-eval-last-sexp "defun")
   ("i" cider-interrupt "interrupt")
   ("p" cider-pprint-eval-defun-at-point "pretty print")
   ("s" cider-eval-last-sexp "sexp")
