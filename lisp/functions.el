@@ -34,3 +34,8 @@ for the current buffer's file name, and the line number at point."
                      absolute-line-ref)))
     (kill-new line-ref)
     (message line-ref)))
+
+;; creates a new eshell buffer
+(defun new-eshell ()
+  (interactive)
+  (eshell t))

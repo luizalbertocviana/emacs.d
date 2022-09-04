@@ -47,7 +47,3 @@
     (if dired-dwim-target
         (or other-dir this-dir)
       this-dir)))
-
-;; creates a new eshell buffer
-(defun new-eshell ()
-  (eshell t))
