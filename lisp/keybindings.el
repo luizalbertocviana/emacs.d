@@ -133,7 +133,7 @@
   :states  '(normal)
   :keymaps '(override)
   :prefix  "SPC t"
-    "t" 'eshell
+    "t" 'new-eshell
 )
 ;; help menu
 (general-define-key
