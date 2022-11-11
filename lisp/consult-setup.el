@@ -1,3 +1,8 @@
+;; Consult users will also want the embark-consult package.
+(use-package embark-consult)
+
+(add-hook 'embark-collect-mode-hook 'consult-preview-at-point-mode)
+
 (use-package consult)
 
 (use-package consult-projectile
@@ -16,12 +21,3 @@
 (define-key global-map [remap projectile-recentf] 'consult-projectile-recentf)
 (define-key global-map [remap projectile-find-file-dwim] 'consult-projectile-find-file)
 
-;; Consult users will also want the embark-consult package.
-(use-package embark-consult
-  :ensure t
-  :after (embark consult)
-  :demand t ; only necessary if you have the hook below
-  ;; if you want to have consult previews as you move around an
-  ;; auto-updating embark collect buffer
-  :hook
-  (embark-collect-mode . consult-preview-at-point-mode))
