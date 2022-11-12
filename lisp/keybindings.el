@@ -107,7 +107,7 @@
     "SPC" (general-key "C-c C-c" :state 'emacs)
     "M"   'tmm-menubar
     "a"   'embark-act
-    "c"   'calendar
+    "C"   'calendar
     "g"   'remapme-google-suggest
     "q"   'save-buffers-kill-terminal
     "r"   'async-shell-command
