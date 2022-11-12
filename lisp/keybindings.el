@@ -87,6 +87,7 @@
     "S"   '(:ignore t :which-key "spell")
     "T"   '(:ignore t :which-key "text")
     "b"   '(:ignore t :which-key "buffers")
+    "c"   '(:ignore t :which-key "characters")
     "f"   '(:ignore t :which-key "files")
     "h"   '(:ignore t :which-key "help")
     "i"   '(:ignore t :which-key "imenu")
@@ -160,6 +161,14 @@
    "e" 'eval-buffer
    "q" 'kill-buffer-and-frame-or-window
    "y" 'clone-indirect-buffer-other-window
+)
+;; characters menu
+(general-define-key
+ :states  '(normal)
+ :keymaps '(override)
+ :prefix  "SPC c"
+   "q" '(:ignore t :which-key "quotation mark")
+   "q" (char-inserter "quotation mark")
 )
 (general-define-key
   :states  '(normal)
