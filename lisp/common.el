@@ -139,3 +139,8 @@
 
 (use-package tree-sitter-langs
   :after tree-sitter)
+
+(use-package dumb-jump
+  :config
+    (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+    (setq xref-show-definitions-function #'xref-show-definitions-completing-read))
