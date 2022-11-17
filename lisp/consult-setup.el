@@ -15,6 +15,7 @@
 
 (defun consult-ripgrep-dwim (arg)
   (interactive "P")
+  (xref-push-marker-stack)
   (if arg
       (consult-ripgrep)
     (consult-ripgrep-thing-at-point)))
