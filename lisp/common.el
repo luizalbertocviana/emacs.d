@@ -144,3 +144,5 @@
   :config
     (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
     (setq xref-show-definitions-function #'xref-show-definitions-completing-read))
+
+(use-package ace-jump-mode)

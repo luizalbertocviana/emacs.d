@@ -109,6 +109,7 @@
     "a"   'embark-act
     "C"   'calendar
     "g"   'remapme-google-suggest
+    "j"   'ace-jump-word-mode
     "q"   'save-buffers-kill-terminal
     "r"   'async-shell-command
     "x"   'execute-extended-command
