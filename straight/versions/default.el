@@ -1,4 +1,5 @@
 (("Emacs-wgrep" . "f9687c28bbc2e84f87a479b6ce04407bb97cfb23")
+ ("ace-jump-mode" . "8351e2df4fbbeb2a4003f2fb39f46d33803f3dac")
  ("ace-window" . "77115afc1b0b9f633084cf7479c767988106c196")
  ("avy" . "955c8dedd68c74f3cf692c1249513f048518c4c9")
  ("bui.el" . "f3a137628e112a91910fd33c0cff0948fa58d470")
@@ -17,6 +18,7 @@
  ("dap-mode" . "2879578abf72bf734675ce70e8dc977e1f43eca5")
  ("dash.el" . "3df46d7d9fe74f52a661565888e4d31fd760f0df")
  ("diff-hl" . "68fb280b300c5d8460cc7b9183e29fb3ec604136")
+ ("diffview-mode" . "0f18be5a227211f4e4073531bfbafc5998f9cef9")
  ("dired-hacks" . "7c0ef09d57a80068a11edc74c3568e5ead5cc15a")
  ("diredfl" . "94bd99eeced6d52a5a7b9db3745239feafd633e2")
  ("docker-compose-mode" . "abaa4f3aeb5c62d7d16e186dd7d77f4e846e126a")
