@@ -66,6 +66,8 @@
 (use-package magit
   :commands (magit-status magit-dispatch))
 
+(use-package diffview)
+
 ;; lsp mode
 (use-package lsp-mode
     :custom

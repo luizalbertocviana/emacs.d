@@ -477,6 +477,19 @@
     "s"   'magit-stage
     "u"   'magit-unstage
 )
+;; magit diff mode
+(general-define-key
+  :states '(normal)
+  :keymaps 'magit-diff-mode-map
+  :prefix "SPC m"
+    "d" 'diffview-current
+)
+;; diffview mode
+(general-define-key
+  :states '(normal)
+  :keymaps 'diffview--mode-map
+    "q" 'diffview--quit
+)
 ;; grep mode
 (general-define-key
   :states  '(normal)
