@@ -148,3 +148,5 @@
     (setq xref-show-definitions-function #'xref-show-definitions-completing-read))
 
 (use-package ace-jump-mode)
+
+(use-package desktop+)

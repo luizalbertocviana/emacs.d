@@ -88,6 +88,7 @@
     "T"   '(:ignore t :which-key "text")
     "b"   '(:ignore t :which-key "buffers")
     "c"   '(:ignore t :which-key "characters")
+    "d"   '(:ignore t :which-key "desktop")
     "f"   '(:ignore t :which-key "files")
     "h"   '(:ignore t :which-key "help")
     "i"   '(:ignore t :which-key "imenu")
@@ -121,6 +122,16 @@
   :prefix  "SPC i"
     "I" 'remapme-imenu-in-all-buffers
     "i" 'imenu
+)
+(general-define-key
+  :states  '(normal)
+  :keymaps '(override)
+  :prefix  "SPC d"
+    "c"   'desktop+-create
+    "l"   'desktop+-load
+    "a"   '(:ignore t :which-key "auto")
+    "a c" 'desktop+-create-auto
+    "a l" 'desktop+-load-auto
 )
 ;; processes menu
 (general-define-key
