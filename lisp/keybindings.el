@@ -335,7 +335,7 @@
   :keymaps '(override)
   :prefix  "SPC p"
     "R"   'xref-find-references
-    "b"   'compile
+    "b"   'compilation-buffer-named-after-command
     "c"   'comment-line
     "d"   'xref-find-definitions
     "e"   'next-error

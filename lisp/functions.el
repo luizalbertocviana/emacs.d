@@ -39,3 +39,8 @@ for the current buffer's file name, and the line number at point."
 (defun new-eshell ()
   (interactive)
   (eshell t))
+
+(defun compilation-buffer-named-after-command (command)
+  (interactive "sCompile command:")
+  (with-current-buffer (compile command)
+    (rename-buffer (concat "Compile (" default-directory "): " command))))
