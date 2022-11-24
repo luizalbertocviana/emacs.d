@@ -17,6 +17,7 @@
  ("csharp-mode" . "8477054c642fcde3c4b7298134799b04d7b4e761")
  ("dap-mode" . "2879578abf72bf734675ce70e8dc977e1f43eca5")
  ("dash.el" . "3df46d7d9fe74f52a661565888e4d31fd760f0df")
+ ("desktop-plus" . "88055cee526a000056201898499cebbd35e3ea76")
  ("diff-hl" . "68fb280b300c5d8460cc7b9183e29fb3ec604136")
  ("diffview-mode" . "0f18be5a227211f4e4073531bfbafc5998f9cef9")
  ("dired-hacks" . "7c0ef09d57a80068a11edc74c3568e5ead5cc15a")
