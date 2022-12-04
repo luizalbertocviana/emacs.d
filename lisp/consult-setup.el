@@ -33,3 +33,4 @@
 (define-key global-map [remap projectile-recentf] 'consult-projectile-recentf)
 (define-key global-map [remap projectile-find-file-dwim] 'consult-projectile-find-file)
 
+(setq completion-in-region-function #'consult-completion-in-region)
