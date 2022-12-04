@@ -30,7 +30,8 @@
 
 ;; autocompletion
 ;; (load "company-setup")
-(load "corfu-setup")
+(when (display-graphic-p)
+  (load "corfu-setup"))
 
 ;; dired setup
 (load "dired-setup")
