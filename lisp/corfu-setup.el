@@ -75,8 +75,3 @@
     (apply #'consult-completion-in-region completion-in-region--data)))
 
 (define-key corfu-map (kbd "M-m") #'corfu-move-to-minibuffer)
-
-(use-package corfu-terminal)
-
-(unless (display-graphic-p)
-  (corfu-terminal-mode +1))
