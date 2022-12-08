@@ -5,7 +5,12 @@
        '(:eval evil-mode-line-tag)
        ;; directory name
        " "
-       '(:eval (abbreviate-file-name default-directory))
+       '(:eval (let ((project-root (projectile-project-root)))
+                 (if project-root
+                     (concat (projectile-project-name)
+                             " - "
+                             (string-remove-prefix project-root default-directory))
+                   default-directory)))
        ;; buffer name
        '(:eval (if (buffer-modified-p) " %b* " " %b "))
        ;; spacing to right align the remaining items (no idea how this
