@@ -84,3 +84,14 @@
 ;; Enable indentation+completion using the TAB key.
 ;; `completion-at-point' is often bound to M-TAB.
 (setq tab-always-indent 'complete)
+
+;; this makes emacs centralize backup file creation in a single directory
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
+
+(setq auto-save-directory (concat user-emacs-directory "auto-save/"))
+
+(unless (file-exists-p auto-save-directory)
+  (make-directory auto-save-directory))
+
+;; makes emacs create auto-save files in a single directory
+(setq auto-save-file-name-transforms `((".*" ,auto-save-directory t)))
