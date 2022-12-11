@@ -81,3 +81,10 @@
   :config
     (define-key evil-normal-state-map "u" 'undo-fu-only-undo)
     (define-key evil-normal-state-map "\C-r" 'undo-fu-only-redo))
+
+(general-define-key
+ :states  '(normal)
+ :keymaps '(override)
+ :prefix  "g"
+ "b" 'xref-go-back
+ "f" 'xref-go-forward)
