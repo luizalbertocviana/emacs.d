@@ -28,6 +28,8 @@
 ;; commonly used packages
 (load "common")
 
+(load "eshell-setup")
+
 ;; autocompletion
 ;; (load "company-setup")
 (when (display-graphic-p)
