@@ -88,3 +88,9 @@
  :prefix  "g"
  "b" 'xref-go-back
  "f" 'xref-go-forward)
+
+(general-define-key
+ :states '(normal)
+ :keymaps '(override)
+ "C-a" 'org-increase-number-at-point
+ "C-S-a" 'org-decrease-number-at-point)
