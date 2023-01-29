@@ -356,9 +356,11 @@
     "l R" 'lsp-workspace-restart
     "l S" 'remapme-lsp-global-workspace-symbol
     "l a" 'lsp-execute-code-action
+    "l b" 'dap-breakpoint-toggle
     "l d" 'lsp-describe-thing-at-point
     "l f" 'lsp-format-buffer
     "l i" 'lsp-organize-imports
+    "l l" 'lsp-avy-lens
     "l q" 'lsp-workspace-shutdown
     "l r" 'lsp-rename
     "l s" 'remapme-lsp-workspace-symbol
