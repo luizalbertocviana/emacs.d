@@ -38,7 +38,7 @@
   ("d" cider-debug-defun-at-point "debug")
   ("e" cider-eval-last-sexp "defun")
   ("i" cider-interrupt "interrupt")
-  ("p" cider-pprint-eval-defun-at-point "pretty print")
+  ("p" cider-pprint-eval-last-sexp "pretty print")
   ("s" cider-eval-last-sexp "sexp")
 )
 
