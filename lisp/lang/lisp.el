@@ -2,7 +2,7 @@
   :hook
     (lisp-mode . sly-mode)
   :custom
-    (inferior-lisp-program "ros run"))
+    (inferior-lisp-program "sbcl"))
 
 (defun lisp-correct-closing-quote ()
   (sp-pair "'" nil :actions :rem)
