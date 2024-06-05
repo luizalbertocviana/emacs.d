@@ -21,7 +21,8 @@
   ;; This is recommended since Dabbrev can be used globally (M-/).
   ;; See also `corfu-excluded-modes'.
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+  (corfu-popupinfo-mode))
 
 ;; A few more useful configurations...
 ;; TAB cycle if there are only few candidates
@@ -52,10 +53,6 @@
     (corfu-mode 1)))
 
 (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
-
-(use-package corfu-doc)
-
-(add-hook 'corfu-mode-hook #'corfu-doc-mode)
 
 (use-package kind-icon
   :ensure t
