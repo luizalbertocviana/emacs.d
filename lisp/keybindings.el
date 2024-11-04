@@ -147,7 +147,7 @@
   :keymaps '(override)
   :prefix  "SPC t"
     "t" 'new-eshell
-    "s" 'shell
+    "s" 'eat
 )
 ;; help menu
 (general-define-key

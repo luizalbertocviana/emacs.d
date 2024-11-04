@@ -30,6 +30,8 @@
 
 (load "eshell-setup")
 
+(load "eat-setup")
+
 ;; autocompletion
 ;; (load "company-setup")
 (when (display-graphic-p)
