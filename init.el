@@ -16,6 +16,9 @@
 ;; directory containing the following files
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
+;; functions for remapping
+(load "remapme-functions")
+
 ;; setting some options
 (load "options")
 
@@ -49,9 +52,6 @@
 
 ;; evil setup
 (load "evil-setup")
-
-;; functions for remapping
-(load "remapme-functions")
 
 ;; keybindings setup
 (load "keybindings")
