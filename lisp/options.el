@@ -55,7 +55,7 @@
 (setq scroll-margin 20)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "Fira Code-12"))
+(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font SemBd 12"))
 
 ;; line numbers setup
 ;; relative line numbering
