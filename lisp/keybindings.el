@@ -158,6 +158,7 @@
     "a" 'apropos
     "f" 'describe-function
     "h" 'help-for-help
+    "i" 'consult-info
     "k" 'describe-key
     "m" 'describe-mode
     "v" 'describe-variable
@@ -301,7 +302,9 @@
   :states  '(normal visual)
   :keymaps '(override)
   :prefix  "SPC s"
+    "b" 'consult-line-multi
     "g" 'grep
+    "l" 'occur
     "s" 'isearch-forward-symbol-at-point
     "r" 'query-replace
     "R" 'replace-string
