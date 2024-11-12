@@ -1,11 +1,5 @@
 (setq python-indent-offset 4)
 
-(use-package lsp-python-ms)
-
-(setq lsp-python-ms-executable (executable-find "python-language-server"))
-
-(add-hook 'python-mode-hook 'lsp)
-
 (general-define-key
  :states  '(normal)
  :keymaps '(python-mode-map)
@@ -13,3 +7,10 @@
  "b" 'python-shell-send-buffer
  "r" 'run-python
  )
+
+(use-package lsp-pyright
+  :ensure t
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
