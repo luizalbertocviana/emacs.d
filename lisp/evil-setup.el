@@ -80,7 +80,8 @@
 (use-package undo-fu
   :config
     (define-key evil-normal-state-map "u" 'undo-fu-only-undo)
-    (define-key evil-normal-state-map "\C-r" 'undo-fu-only-redo))
+    (define-key evil-normal-state-map "\C-r" 'undo-fu-only-redo)
+    (define-key evil-normal-state-map "U" 'undo-fu-only-redo))
 
 (general-define-key
  :states  '(normal)
