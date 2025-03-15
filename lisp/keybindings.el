@@ -171,7 +171,7 @@
    "D" 'kill-some-buffers
    "B" 'buffer-menu
    "b" 'switch-to-buffer
-   "d" 'kill-this-buffer
+   "d" 'kill-current-buffer
    "e" 'eval-buffer
    "q" 'kill-buffer-and-frame-or-window
    "y" 'clone-indirect-buffer-other-window
